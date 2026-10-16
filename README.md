@@ -36,4 +36,4 @@ Proyecto indie impulsado por **Game Dojo**.
 
 ---
 
-*Este juego recién está comenzando. ¡Gracias por acompañarnos en el desarrollo!* :man_zombie:
+*Este juego recién está comenzando. ¡Gracias por acompañarnos en el desarrollo!*
