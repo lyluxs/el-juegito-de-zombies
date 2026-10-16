@@ -10,18 +10,18 @@ Se trata de un shooter de estilo retro donde los zombies son nuestros principale
 
 Actualmente, el juego se encuentra en sus primeras etapas de desarrollo. Todavía estamos trabajando en sus mecánicas, escenarios y sistemas. ;)
 
-## :construction: Estado del desarrollo
+## Estado del desarrollo
 
 El proyecto está en una etapa temprana de desarrollo. ¡Todavía queda mucho por crear, probar y mejorar!
 
-## :tools: Tecnologías
+## Tecnologías
 
 - **Motor:** Godot Engine
 - **Género:** Shooter
 - **Estilo:** Retro
 - **Plataforma:** Windows y en un futuro linux
 
-## :inbox_tray: Descargas
+## Descargas
 
 Podés encontrar las versiones disponibles del juego en la sección [Releases]
 
