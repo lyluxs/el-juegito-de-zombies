@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://byp2ls17qtxsb"]
+
+[ext_resource type="PackedScene" uid="uid://c5ffyfve1y2hj" path="res://map.tscn" id="1_xe7la"]
+[ext_resource type="PackedScene" uid="uid://c02eep3h2lnx" path="res://player.tscn" id="2_5mnk7"]
+[ext_resource type="PackedScene" uid="uid://dxw7tv3480qs0" path="res://dona.tscn" id="5_yak88"]
+[ext_resource type="PackedScene" uid="uid://d1roton4q51y" path="res://zombie.tscn" id="5_ym4tk"]
+[ext_resource type="PackedScene" uid="uid://3lw1taplkc4r" path="res://Silly Zombie.tscn" id="6_ym4tk"]
+
+[node name="Nivel de prueba" type="Node2D" unique_id=765798829]
+
+[node name="Map" parent="." unique_id=1224895729 instance=ExtResource("1_xe7la")]
+
+[node name="SillyZombie" parent="." unique_id=1314253695 instance=ExtResource("6_ym4tk")]
+position = Vector2(190, 73)
+
+[node name="Player" parent="." unique_id=88376537 instance=ExtResource("2_5mnk7")]
+position = Vector2(39, 70)
+
+[node name="Dona" parent="." unique_id=2060434253 instance=ExtResource("5_yak88")]
+position = Vector2(201, 45)
+
+[node name="Zombie" parent="." unique_id=467401612 instance=ExtResource("5_ym4tk")]
+position = Vector2(100, 36)

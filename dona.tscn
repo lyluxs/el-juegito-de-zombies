@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dxw7tv3480qs0"]
+
+[ext_resource type="Texture2D" uid="uid://c7176uev4a4wi" path="res://Interactuales-20261005T172909Z-1-001/Dona (Interactuable).png" id="1_cndlp"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tfucu"]
+radius = 4.0
+height = 8.0
+
+[node name="Dona" type="StaticBody2D" unique_id=2060434253]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1520628949]
+texture = ExtResource("1_cndlp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1530792930]
+shape = SubResource("CapsuleShape2D_tfucu")

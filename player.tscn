@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://c02eep3h2lnx"]
+
+[ext_resource type="Script" uid="uid://bu6tbvmtqbb61" path="res://player.gd" id="1_onrkg"]
+[ext_resource type="Texture2D" uid="uid://b67b4ri5t0qc0" path="res://Player/untitled_0001.png" id="2_dw050"]
+[ext_resource type="Texture2D" uid="uid://bm1t0yovbwsdw" path="res://Player/untitled_0002.png" id="3_b26j0"]
+[ext_resource type="PackedScene" uid="uid://bbqkcuptq4osi" path="res://weapon.tscn" id="3_i3pqv"]
+[ext_resource type="Texture2D" uid="uid://c54edornp4o1u" path="res://Player/untitled_0003.png" id="4_n7ghd"]
+[ext_resource type="Texture2D" uid="uid://ix8py6c7ejof" path="res://Player/untitled_0004.png" id="5_nvl01"]
+[ext_resource type="Texture2D" uid="uid://df3cb3xnw675s" path="res://Player/untitled_0005.png" id="6_ivps1"]
+[ext_resource type="Texture2D" uid="uid://dimv0v2yah2sf" path="res://Player/untitled_0006.png" id="7_urp6f"]
+[ext_resource type="Texture2D" uid="uid://wkbysklbxne1" path="res://Player/playerwalk_0001.png" id="8_n7ghd"]
+[ext_resource type="Texture2D" uid="uid://wdmnws0t4swx" path="res://Player/playerwalk_0002.png" id="9_nvl01"]
+[ext_resource type="PackedScene" uid="uid://c1bpbxj407sjh" path="res://bullet.tscn" id="11_nvl01"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tfucu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_dw050")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_b26j0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_n7ghd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_nvl01")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ivps1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_urp6f")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_n7ghd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_nvl01")
+}],
+"loop": 1,
+"name": &"walk",
+"speed": 3.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tfucu"]
+radius = 3.306546
+
+[node name="Player" type="CharacterBody2D" unique_id=88376537]
+position = Vector2(0, 3)
+script = ExtResource("1_onrkg")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=313326449]
+sprite_frames = SubResource("SpriteFrames_tfucu")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="Weapon" parent="." unique_id=1109859132 instance=ExtResource("3_i3pqv")]
+position = Vector2(10, 1)
+bullet_scene = ExtResource("11_nvl01")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=837559898]
+rotation = 0.06110924
+scale = Vector2(1.2432665, 1.37011)
+shape = SubResource("CircleShape2D_tfucu")
+debug_color = Color(0.8935813, 0.27622297, 0.43095478, 0.41960785)

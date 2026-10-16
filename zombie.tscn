@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://d1roton4q51y"]
+
+[ext_resource type="Script" uid="uid://boudm1wbau0p" path="res://zombie.gd" id="1_roy8y"]
+[ext_resource type="Texture2D" uid="uid://3m7eip0ix2vn" path="res://Zombies-20261005T172857Z-1-001/Zombies/Zombie (Amarillo)(Walk)(10x11).png" id="2_roy8y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_onrkg"]
+size = Vector2(2.8986251, 3.497354)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jmu02"]
+atlas = ExtResource("2_roy8y")
+region = Rect2(0, 0, 10, 11)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eseir"]
+atlas = ExtResource("2_roy8y")
+region = Rect2(10, 0, 10, 11)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7nqyo"]
+atlas = ExtResource("2_roy8y")
+region = Rect2(0, 0, 10, 11)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tfucu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jmu02")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eseir")
+}],
+"loop": 1,
+"name": &"Walk",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7nqyo")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lnshm"]
+radius = 62.968246
+
+[node name="Zombie" type="CharacterBody2D" unique_id=467401612]
+script = ExtResource("1_roy8y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1545350068]
+position = Vector2(1, -2.842171e-14)
+rotation = -3.1415925
+scale = Vector2(1.9035151, -1.9964802)
+shape = SubResource("RectangleShape2D_onrkg")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=58527900]
+sprite_frames = SubResource("SpriteFrames_tfucu")
+animation = &"idle"
+frame_progress = 0.01909619
+
+[node name="DetectionArea" type="Area2D" parent="AnimatedSprite2D" unique_id=1112151851]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/DetectionArea" unique_id=709598425]
+shape = SubResource("CircleShape2D_lnshm")
+
+[connection signal="body_entered" from="AnimatedSprite2D/DetectionArea" to="." method="_on_detection_area_body_entered"]

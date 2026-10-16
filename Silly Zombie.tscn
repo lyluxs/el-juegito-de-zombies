@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://3lw1taplkc4r"]
+
+[ext_resource type="Script" uid="uid://7il8iqb1uxf2" path="res://silly_zombie.gd" id="1_qbvfi"]
+[ext_resource type="Texture2D" uid="uid://oxkvoqjm08ev" path="res://Zombies-20261005T172857Z-1-001/Zombies/Zombie Silly (Blanco)(Walk)(13x14).png" id="1_vymha"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qbvfi"]
+atlas = ExtResource("1_vymha")
+region = Rect2(0, 0, 13, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_euh2t"]
+atlas = ExtResource("1_vymha")
+region = Rect2(13, 0, 13, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vymha"]
+atlas = ExtResource("1_vymha")
+region = Rect2(0, 0, 13, 14)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tfucu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qbvfi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_euh2t")
+}],
+"loop": 1,
+"name": &"Walk",
+"speed": 2.5
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vymha")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hqtel"]
+radius = 2.0
+height = 8.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tfucu"]
+radius = 62.968246
+
+[node name="SillyZombie" type="CharacterBody2D" unique_id=1314253695]
+script = ExtResource("1_qbvfi")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=100082954]
+sprite_frames = SubResource("SpriteFrames_tfucu")
+animation = &"Walk"
+frame_progress = 0.729444
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=862113515]
+position = Vector2(-1, 2)
+shape = SubResource("CapsuleShape2D_hqtel")
+
+[node name="DetectionArea" type="Area2D" parent="." unique_id=1744026940]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea" unique_id=2108855823]
+shape = SubResource("CircleShape2D_tfucu")
+
+[connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
