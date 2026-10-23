@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="El juegito de zombies"
-run/main_scene="uid://byp2ls17qtxsb"
+run/main_scene="uid://3flhxmbvgmsx"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 

@@ -1,23 +1,207 @@
 [gd_scene format=3 uid="uid://byp2ls17qtxsb"]
 
+[ext_resource type="Script" uid="uid://br3hww2g44lqk" path="res://nivel_de_prueba.gd" id="1_gdnvi"]
 [ext_resource type="PackedScene" uid="uid://c5ffyfve1y2hj" path="res://map.tscn" id="1_xe7la"]
 [ext_resource type="PackedScene" uid="uid://c02eep3h2lnx" path="res://player.tscn" id="2_5mnk7"]
+[ext_resource type="Script" uid="uid://cnhfgelav3i7a" path="res://cafe.gd" id="3_dpnas"]
+[ext_resource type="Texture2D" uid="uid://1wi0avfofr3l" path="res://Interactuales-20261005T172909Z-1-001/cafe.png" id="4_gdnvi"]
+[ext_resource type="PackedScene" uid="uid://7vh3tjqvhco4" path="res://zombiegaucho.tscn" id="5_i454i"]
 [ext_resource type="PackedScene" uid="uid://dxw7tv3480qs0" path="res://dona.tscn" id="5_yak88"]
 [ext_resource type="PackedScene" uid="uid://d1roton4q51y" path="res://zombie.tscn" id="5_ym4tk"]
 [ext_resource type="PackedScene" uid="uid://3lw1taplkc4r" path="res://Silly Zombie.tscn" id="6_ym4tk"]
+[ext_resource type="PackedScene" uid="uid://b2pqbhkyk7ct8" path="res://sistema_de_vidas_grafico.tscn" id="7_i454i"]
+[ext_resource type="Script" uid="uid://dxrsrlv6mq205" path="res://mensajes.gd" id="11_peshc"]
+[ext_resource type="FontFile" uid="uid://c6cbq083ogadw" path="res://fuentes/Press_Start_2P/PressStart2P-Regular.ttf" id="12_y0745"]
+[ext_resource type="Texture2D" uid="uid://exfccww52q4r" path="res://Interfaz/contador zombies resolucion bien.png.png" id="13_ej53q"]
+[ext_resource type="Script" uid="uid://dpk13sdh86vwc" path="res://texture_rect.gd" id="14_5nfyk"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_47mtk"]
+font = ExtResource("12_y0745")
+font_size = 5
+font_color = Color(0.7058824, 0.12156863, 0.16078432, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x25mw"]
+size = Vector2(5, 5)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tfucu"]
+radius = 35.35534
+
+[sub_resource type="LabelSettings" id="LabelSettings_tfucu"]
+line_spacing = 2.0
+font = ExtResource("12_y0745")
+font_size = 4
 
 [node name="Nivel de prueba" type="Node2D" unique_id=765798829]
+script = ExtResource("1_gdnvi")
 
 [node name="Map" parent="." unique_id=1224895729 instance=ExtResource("1_xe7la")]
 
-[node name="SillyZombie" parent="." unique_id=1314253695 instance=ExtResource("6_ym4tk")]
+[node name="Player" parent="." unique_id=88376537 instance=ExtResource("2_5mnk7")]
+position = Vector2(40, 69)
+speed = null
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=807782915]
+position = Vector2(0, 1)
+
+[node name="ContadorDeZombies" type="TextureRect" parent="Player" unique_id=364873802]
+offset_left = 141.0
+offset_top = 45.0
+offset_right = 191.0
+offset_bottom = 95.0
+scale = Vector2(1.5672593, 1.4284873)
+texture = ExtResource("13_ej53q")
+script = ExtResource("14_5nfyk")
+
+[node name="NumeroZombies" type="Label" parent="Player/ContadorDeZombies" unique_id=1786953517]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 23.0
+offset_right = 66.0
+offset_bottom = 46.0
+text = "0"
+label_settings = SubResource("LabelSettings_47mtk")
+
+[node name="Cafe3" type="StaticBody2D" parent="." unique_id=1001779494]
+position = Vector2(421, 101)
+script = ExtResource("3_dpnas")
+
+[node name="Sprite2D" type="Sprite2D" parent="Cafe3" unique_id=390584759]
+texture = ExtResource("4_gdnvi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cafe3" unique_id=2098553122]
+position = Vector2(-0.5, 1.5)
+shape = SubResource("RectangleShape2D_x25mw")
+
+[node name="Area2D" type="Area2D" parent="Cafe3" unique_id=1576457188]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cafe3/Area2D" unique_id=892022268]
+shape = SubResource("CircleShape2D_tfucu")
+
+[node name="Cafe" type="StaticBody2D" parent="." unique_id=337589966]
+position = Vector2(-111, -44)
+script = ExtResource("3_dpnas")
+
+[node name="Sprite2D" type="Sprite2D" parent="Cafe" unique_id=1590608041]
+texture = ExtResource("4_gdnvi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cafe" unique_id=689086205]
+position = Vector2(-0.5, 1.5)
+shape = SubResource("RectangleShape2D_x25mw")
+
+[node name="Area2D" type="Area2D" parent="Cafe" unique_id=449144814]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cafe/Area2D" unique_id=2011313114]
+shape = SubResource("CircleShape2D_tfucu")
+
+[node name="Dona2" parent="." unique_id=1779895812 instance=ExtResource("5_yak88")]
+position = Vector2(421, -80)
+
+[node name="Dona" parent="." unique_id=812807036 instance=ExtResource("5_yak88")]
+position = Vector2(-344, -134)
+
+[node name="Dona3" parent="." unique_id=2060434253 instance=ExtResource("5_yak88")]
+position = Vector2(220, 119)
+
+[node name="Zona1" type="Node2D" parent="." unique_id=1670911894]
+
+[node name="Zombie" parent="Zona1" unique_id=467401612 groups=["zombies"] instance=ExtResource("5_ym4tk")]
+position = Vector2(101, 37)
+
+[node name="Zona2" type="Node2D" parent="." unique_id=1190597853]
+
+[node name="SillyZombie" parent="Zona2" unique_id=1314253695 groups=["zombies"] instance=ExtResource("6_ym4tk")]
 position = Vector2(190, 73)
 
-[node name="Player" parent="." unique_id=88376537 instance=ExtResource("2_5mnk7")]
-position = Vector2(39, 70)
+[node name="Zona3" type="Node2D" parent="." unique_id=1828645731]
 
-[node name="Dona" parent="." unique_id=2060434253 instance=ExtResource("5_yak88")]
-position = Vector2(201, 45)
+[node name="Zombiegaucho" parent="Zona3" unique_id=351470608 groups=["zombies"] instance=ExtResource("5_i454i")]
+position = Vector2(388, 88)
 
-[node name="Zombie" parent="." unique_id=467401612 instance=ExtResource("5_ym4tk")]
-position = Vector2(100, 36)
+[node name="Zona4" type="Node2D" parent="." unique_id=1952825991]
+
+[node name="Zombiegaucho3" parent="Zona4" unique_id=690052785 groups=["zombies"] instance=ExtResource("5_i454i")]
+position = Vector2(520, 67)
+
+[node name="SillyZombie2" parent="Zona4" unique_id=1381862133 groups=["zombies"] instance=ExtResource("6_ym4tk")]
+position = Vector2(588, 96)
+
+[node name="SillyZombie4" parent="Zona4" unique_id=1250048841 groups=["zombies"] instance=ExtResource("6_ym4tk")]
+position = Vector2(672, 57)
+
+[node name="SillyZombie5" parent="Zona4" unique_id=874239526 groups=["zombies"] instance=ExtResource("6_ym4tk")]
+position = Vector2(591, 152)
+
+[node name="SillyZombie3" parent="Zona4" unique_id=1651045635 groups=["zombies"] instance=ExtResource("6_ym4tk")]
+position = Vector2(673, 15)
+
+[node name="Zombiegaucho5" parent="Zona4" unique_id=401524098 groups=["zombies"] instance=ExtResource("5_i454i")]
+position = Vector2(591, 15)
+
+[node name="Zombiegaucho2" parent="Zona4" unique_id=2132773962 groups=["zombies"] instance=ExtResource("5_i454i")]
+position = Vector2(665, 131)
+
+[node name="Zombie2" parent="Zona4" unique_id=2119782273 groups=["zombies"] instance=ExtResource("5_ym4tk")]
+position = Vector2(534, 29)
+
+[node name="Zombie3" parent="Zona4" unique_id=2042804882 groups=["zombies"] instance=ExtResource("5_ym4tk")]
+position = Vector2(516, 148)
+
+[node name="Zombiegaucho4" parent="Zona4" unique_id=1208391797 groups=["zombies"] instance=ExtResource("5_i454i")]
+position = Vector2(629, 18)
+
+[node name="Zona5" type="Node2D" parent="." unique_id=131063525]
+
+[node name="Zombiegaucho6" parent="Zona5" unique_id=214219997 groups=["zombies"] instance=ExtResource("5_i454i")]
+position = Vector2(318, -177)
+
+[node name="Zona6" type="Node2D" parent="." unique_id=540829917]
+
+[node name="Zombie6" parent="Zona6" unique_id=1291449510 groups=["zombies"] instance=ExtResource("5_ym4tk")]
+position = Vector2(-217, -84)
+
+[node name="Zombiegaucho6" parent="Zona6" unique_id=1187983400 groups=["zombies"] instance=ExtResource("5_i454i")]
+position = Vector2(-68, -198)
+
+[node name="Zombiegaucho8" parent="Zona6" unique_id=1679379404 groups=["zombies"] instance=ExtResource("5_i454i")]
+position = Vector2(-105, -116)
+
+[node name="Zombiegaucho9" parent="Zona6" unique_id=1791986907 groups=["zombies"] instance=ExtResource("5_i454i")]
+position = Vector2(-224, -128)
+
+[node name="Zombiegaucho7" parent="Zona6" unique_id=916925025 groups=["zombies"] instance=ExtResource("5_i454i")]
+position = Vector2(-230, -197)
+
+[node name="Zombiegaucho10" parent="Zona6" unique_id=939119227 groups=["zombies"] instance=ExtResource("5_i454i")]
+position = Vector2(-160, -143)
+
+[node name="Zombie5" parent="Zona6" unique_id=751755800 groups=["zombies"] instance=ExtResource("5_ym4tk")]
+position = Vector2(-72, -94)
+
+[node name="Zombie4" parent="Zona6" unique_id=2022740341 groups=["zombies"] instance=ExtResource("5_ym4tk")]
+position = Vector2(-181, -109)
+
+[node name="Zombie7" parent="Zona6" unique_id=1354950231 groups=["zombies"] instance=ExtResource("5_ym4tk")]
+position = Vector2(-65, -150)
+
+[node name="Zona7" type="Node2D" parent="." unique_id=1488573777]
+
+[node name="Sistema de vidas grafico" parent="." unique_id=2002290705 instance=ExtResource("7_i454i")]
+
+[node name="Mensajes" type="CanvasLayer" parent="." unique_id=880963318]
+script = ExtResource("11_peshc")
+
+[node name="TextoPuerta" type="Label" parent="Mensajes" unique_id=1813392972]
+visible = false
+offset_left = 30.0
+offset_top = 91.0
+offset_right = 230.0
+offset_bottom = 114.0
+scale = Vector2(0.51983947, 0.61382216)
+text = "     Nuh huh primero
+  mata a todos los zombies"
+label_settings = SubResource("LabelSettings_tfucu")
+
+[connection signal="body_entered" from="Cafe3/Area2D" to="Cafe3" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Cafe3/Area2D" to="Cafe3" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Cafe/Area2D" to="Cafe" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Cafe/Area2D" to="Cafe" method="_on_area_2d_body_exited"]

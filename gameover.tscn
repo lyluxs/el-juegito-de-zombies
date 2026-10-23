@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://bye3fpqyu1vmr"]
+
+[ext_resource type="Script" uid="uid://c6hlgw00uvb6m" path="res://gameover.gd" id="1_w3x71"]
+[ext_resource type="Texture2D" uid="uid://cj05yh217b4pk" path="res://Interfaz/gameoverbg.png" id="2_af4fq"]
+[ext_resource type="Texture2D" uid="uid://cty20jq0v1lf8" path="res://Interfaz/zombie.png" id="3_g1o2j"]
+[ext_resource type="Texture2D" uid="uid://cx7ns88y57vmy" path="res://Interfaz/gameoverperdiste.png" id="4_pn7gr"]
+[ext_resource type="Texture2D" uid="uid://be7h7u75dodja" path="res://Interfaz/empezar.png" id="5_b7a41"]
+[ext_resource type="Texture2D" uid="uid://cxghi01noba3n" path="res://Interfaz/salir.png" id="6_7nmon"]
+
+[node name="Gameover" type="CanvasLayer" unique_id=1723476796]
+script = ExtResource("1_w3x71")
+
+[node name="Fondo" type="Sprite2D" parent="." unique_id=1048949911]
+position = Vector2(120, 80)
+texture = ExtResource("2_af4fq")
+
+[node name="Zombie" type="Sprite2D" parent="Fondo" unique_id=539210472]
+texture = ExtResource("3_g1o2j")
+
+[node name="BotonSalir" type="TextureButton" parent="Fondo" unique_id=1027172968]
+offset_left = -120.00001
+offset_top = -80.0
+offset_right = 119.99999
+offset_bottom = 80.0
+texture_normal = ExtResource("6_7nmon")
+
+[node name="BotonReiniciar" type="TextureButton" parent="Fondo" unique_id=484698220]
+offset_left = -120.00001
+offset_top = -80.0
+offset_right = 119.99999
+offset_bottom = 80.0
+texture_normal = ExtResource("5_b7a41")
+
+[node name="TextoPerdiste" type="TextureRect" parent="Fondo" unique_id=1636102660]
+offset_left = -120.00001
+offset_top = -80.0
+offset_right = 119.99999
+offset_bottom = 80.0
+mouse_filter = 2
+texture = ExtResource("4_pn7gr")
+
+[node name="Oscurecimiento" type="ColorRect" parent="Fondo" unique_id=924055521]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -225.0
+offset_top = -148.0
+offset_right = -185.0
+offset_bottom = -108.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(77.7395, 25.416803)
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1482062534]
+
+[connection signal="mouse_entered" from="Fondo/BotonSalir" to="." method="_on_boton_salir_mouse_entered"]
+[connection signal="mouse_exited" from="Fondo/BotonSalir" to="." method="_on_boton_salir_mouse_exited"]
+[connection signal="pressed" from="Fondo/BotonSalir" to="." method="_on_salir_pressed"]
+[connection signal="mouse_entered" from="Fondo/BotonReiniciar" to="." method="_on_boton_reiniciar_mouse_entered"]
+[connection signal="mouse_exited" from="Fondo/BotonReiniciar" to="." method="_on_boton_reiniciar_mouse_exited"]
+[connection signal="pressed" from="Fondo/BotonReiniciar" to="." method="_on_reiniciar_pressed"]

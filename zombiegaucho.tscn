@@ -1,0 +1,134 @@
+[gd_scene format=3 uid="uid://7vh3tjqvhco4"]
+
+[ext_resource type="Script" uid="uid://dm5uek47eeh8w" path="res://zombiegaucho.gd" id="1_eun8q"]
+[ext_resource type="Texture2D" uid="uid://8ea4j6mus80a" path="res://Zombies-20261005T172857Z-1-001/Zombies/hurt zombie.png" id="2_hoy8c"]
+[ext_resource type="Texture2D" uid="uid://c8ch4dupch835" path="res://Zombies-20261005T172857Z-1-001/Zombies/Zombie (Gaucho)(Walk)(13x13).png" id="2_mcbk1"]
+[ext_resource type="Texture2D" uid="uid://cq2xcleub3kjw" path="res://Zombies-20261005T172857Z-1-001/Zombies/death zombie.png" id="3_hoy8c"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ljj7h"]
+atlas = ExtResource("2_hoy8c")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cb2lj"]
+atlas = ExtResource("2_hoy8c")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lnshm"]
+atlas = ExtResource("3_hoy8c")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x5rsa"]
+atlas = ExtResource("3_hoy8c")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ogcpr"]
+atlas = ExtResource("3_hoy8c")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i82o5"]
+atlas = ExtResource("3_hoy8c")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jw3ev"]
+atlas = ExtResource("3_hoy8c")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1umbl"]
+atlas = ExtResource("2_mcbk1")
+region = Rect2(0, 0, 13, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ocfms"]
+atlas = ExtResource("2_mcbk1")
+region = Rect2(13, 0, 13, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hoy8c"]
+atlas = ExtResource("2_mcbk1")
+region = Rect2(0, 0, 13, 13)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tfucu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ljj7h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cb2lj")
+}],
+"loop": 0,
+"name": &"Damage",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lnshm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x5rsa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ogcpr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i82o5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jw3ev")
+}],
+"loop": 0,
+"name": &"Death",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1umbl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ocfms")
+}],
+"loop": 1,
+"name": &"Walk",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hoy8c")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_eun8q"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tfucu"]
+radius = 3.0
+height = 10.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ljj7h"]
+radius = 105.076164
+
+[node name="Zombiegaucho" type="CharacterBody2D" unique_id=351470608]
+position = Vector2(124, 83)
+script = ExtResource("1_eun8q")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1099926148]
+sprite_frames = SubResource("SpriteFrames_tfucu")
+animation = &"Death"
+
+[node name="AttackArea" type="Area2D" parent="." unique_id=634364280]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea" unique_id=946649005]
+shape = SubResource("CircleShape2D_eun8q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=122345198]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_tfucu")
+
+[node name="DetectionArea" type="Area2D" parent="." unique_id=1384181495]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea" unique_id=433951419]
+shape = SubResource("CircleShape2D_ljj7h")
+
+[connection signal="body_entered" from="AttackArea" to="." method="_on_attack_area_body_entered"]
+[connection signal="body_exited" from="AttackArea" to="." method="_on_attack_area_body_exited"]
+[connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]

@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://3flhxmbvgmsx"]
+
+[ext_resource type="Texture2D" uid="uid://bl43x332jcvws" path="res://Interfaz/interfazmenuinicio.png" id="1_prmyc"]
+[ext_resource type="Script" uid="uid://bh5yaej7t1ako" path="res://boton_jugar.gd" id="2_cmdc3"]
+[ext_resource type="Texture2D" uid="uid://bvsvxceob0s28" path="res://botones/Botón inactivo.png" id="3_c8wos"]
+[ext_resource type="Texture2D" uid="uid://b7ydjk8k751fs" path="res://botones/Boton activo.png" id="4_xallb"]
+[ext_resource type="PackedScene" uid="uid://byp2ls17qtxsb" path="res://nivel_de_prueba.tscn" id="5_pih4a"]
+[ext_resource type="FontFile" uid="uid://c6cbq083ogadw" path="res://fuentes/Press_Start_2P/PressStart2P-Regular.ttf" id="6_cmdc3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tfucu"]
+size = Vector2(44, 13)
+
+[sub_resource type="LabelSettings" id="LabelSettings_oh8ve"]
+font = ExtResource("6_cmdc3")
+
+[node name="Node2D" type="Node2D" unique_id=2112995108]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1300317243]
+position = Vector2(121, 81)
+texture = ExtResource("1_prmyc")
+
+[node name="BotonJugar" type="Area2D" parent="." unique_id=2103545662]
+position = Vector2(127, 122)
+script = ExtResource("2_cmdc3")
+boton_inactivo = ExtResource("3_c8wos")
+boton_presionado = ExtResource("4_xallb")
+escena_juego = ExtResource("5_pih4a")
+
+[node name="Sprite2D" type="Sprite2D" parent="BotonJugar" unique_id=67056177]
+texture = ExtResource("3_c8wos")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BotonJugar" unique_id=482048164]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_tfucu")
+
+[node name="Label" type="Label" parent="BotonJugar" unique_id=604966045]
+offset_left = -13.0
+offset_top = -1.9999989
+offset_right = 67.0
+offset_bottom = 21.000002
+scale = Vector2(0.3324058, 0.38145936)
+text = "Jugar"
+label_settings = SubResource("LabelSettings_oh8ve")
+
+[connection signal="mouse_entered" from="BotonJugar" to="BotonJugar" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="BotonJugar" to="BotonJugar" method="_on_mouse_exited"]

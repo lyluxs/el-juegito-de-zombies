@@ -16,8 +16,9 @@ func _ready():
 func _physics_process(delta):
 	global_position += direction * speed * delta
 
+
 func _on_body_entered(body):
-	if body.name == "SillyZombie" or body.name == "Zombie":
+	if body.is_in_group("zombies"):
 		if body.has_method("recibir_golpe"):
 			body.recibir_golpe()
 		queue_free()

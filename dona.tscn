@@ -1,15 +1,28 @@
 [gd_scene format=3 uid="uid://dxw7tv3480qs0"]
 
 [ext_resource type="Texture2D" uid="uid://c7176uev4a4wi" path="res://Interactuales-20261005T172909Z-1-001/Dona (Interactuable).png" id="1_cndlp"]
+[ext_resource type="Script" uid="uid://ci7375ip5di05" path="res://dona.gd" id="1_rqk0x"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tfucu"]
 radius = 4.0
 height = 8.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_tfucu"]
+radius = 19.026299
+
 [node name="Dona" type="StaticBody2D" unique_id=2060434253]
+script = ExtResource("1_rqk0x")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1520628949]
 texture = ExtResource("1_cndlp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1530792930]
 shape = SubResource("CapsuleShape2D_tfucu")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1798113411]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1470337059]
+shape = SubResource("CircleShape2D_tfucu")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
