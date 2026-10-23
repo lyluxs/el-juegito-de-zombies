@@ -123,7 +123,7 @@ position = Vector2(111, -58)
 position = Vector2(-344, -134)
 
 [node name="Dona3" parent="." unique_id=1921791830 instance=ExtResource("5_yak88")]
-position = Vector2(220, 119)
+position = Vector2(211, 59)
 
 [node name="Zona1" type="Node2D" parent="." unique_id=1670911894]
 

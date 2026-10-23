@@ -57,6 +57,7 @@ mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1482062534]
+position = Vector2(120, 80)
 
 [connection signal="mouse_entered" from="Fondo/BotonSalir" to="." method="_on_boton_salir_mouse_entered"]
 [connection signal="mouse_exited" from="Fondo/BotonSalir" to="." method="_on_boton_salir_mouse_exited"]
