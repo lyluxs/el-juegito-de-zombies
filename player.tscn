@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bu6tbvmtqbb61" path="res://player.gd" id="1_onrkg"]
 [ext_resource type="Texture2D" uid="uid://b67b4ri5t0qc0" path="res://Player/untitled_0001.png" id="2_dw050"]
+[ext_resource type="Texture2D" uid="uid://cgkpf1didu84b" path="res://sombra/Sombra.png" id="2_ivps1"]
 [ext_resource type="Texture2D" uid="uid://bm1t0yovbwsdw" path="res://Player/untitled_0002.png" id="3_b26j0"]
 [ext_resource type="PackedScene" uid="uid://bbqkcuptq4osi" path="res://weapon.tscn" id="3_i3pqv"]
 [ext_resource type="Texture2D" uid="uid://c54edornp4o1u" path="res://Player/untitled_0003.png" id="4_n7ghd"]
@@ -55,6 +56,10 @@ radius = 3.306546
 [node name="Player" type="CharacterBody2D" unique_id=88376537]
 position = Vector2(0, 3)
 script = ExtResource("1_onrkg")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1548914068]
+position = Vector2(0, 8)
+texture = ExtResource("2_ivps1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=313326449]
 sprite_frames = SubResource("SpriteFrames_tfucu")

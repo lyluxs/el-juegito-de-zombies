@@ -4,13 +4,12 @@
 [ext_resource type="Texture2D" uid="uid://c7bpt1harotof" path="res://Armas-20261005T172926Z-1-001/Armas/untitled.png" id="2_v8qja"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tfucu"]
-size = Vector2(17, 17)
+size = Vector2(2, 2)
 
 [node name="Bullet" type="Area2D" unique_id=1937555120]
 script = ExtResource("1_v8qja")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=568902384]
-position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_tfucu")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1391026745]

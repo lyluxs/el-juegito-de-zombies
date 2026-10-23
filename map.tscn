@@ -140,8 +140,8 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pxo21"]
 size = Vector2(6, 20)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_tfucu"]
-radius = 17.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ivps1"]
+size = Vector2(10, 21)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r2o42"]
 size = Vector2(23, 15)
@@ -228,8 +228,8 @@ shape = SubResource("RectangleShape2D_pxo21")
 [node name="InteractionArea" type="Area2D" parent="Puerta" unique_id=1961178491]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Puerta/InteractionArea" unique_id=1889241245]
-position = Vector2(134, 82)
-shape = SubResource("CircleShape2D_tfucu")
+position = Vector2(134, 82.5)
+shape = SubResource("RectangleShape2D_ivps1")
 
 [node name="Puerta2" type="StaticBody2D" parent="." unique_id=1999019461]
 position = Vector2(382, 61)
@@ -248,9 +248,9 @@ shape = SubResource("RectangleShape2D_pxo21")
 [node name="InteractionArea" type="Area2D" parent="Puerta2" unique_id=781775568]
 position = Vector2(-134.25568, -82.948235)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Puerta2/InteractionArea" unique_id=932194671]
-position = Vector2(134, 82)
-shape = SubResource("CircleShape2D_tfucu")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Puerta2/InteractionArea" unique_id=76922199]
+position = Vector2(134, 82.5)
+shape = SubResource("RectangleShape2D_ivps1")
 
 [node name="Puerta7" type="StaticBody2D" parent="." unique_id=2018927832]
 position = Vector2(28, -136)
@@ -269,9 +269,9 @@ shape = SubResource("RectangleShape2D_pxo21")
 [node name="InteractionArea" type="Area2D" parent="Puerta7" unique_id=69224922]
 position = Vector2(-134.25568, -82.948235)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Puerta7/InteractionArea" unique_id=828695641]
-position = Vector2(134, 82)
-shape = SubResource("CircleShape2D_tfucu")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Puerta7/InteractionArea" unique_id=1552227838]
+position = Vector2(134, 82.5)
+shape = SubResource("RectangleShape2D_ivps1")
 
 [node name="Puerta8" type="StaticBody2D" parent="." unique_id=2049660104]
 position = Vector2(110.00001, -137.00002)
@@ -290,9 +290,9 @@ shape = SubResource("RectangleShape2D_pxo21")
 [node name="InteractionArea" type="Area2D" parent="Puerta8" unique_id=54266712]
 position = Vector2(-134.25568, -82.948235)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Puerta8/InteractionArea" unique_id=166486752]
-position = Vector2(134, 82)
-shape = SubResource("CircleShape2D_tfucu")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Puerta8/InteractionArea" unique_id=1422554812]
+position = Vector2(134, 82.5)
+shape = SubResource("RectangleShape2D_ivps1")
 
 [node name="Puerta9" type="StaticBody2D" parent="." unique_id=1786880713]
 position = Vector2(190, -137)
@@ -311,9 +311,9 @@ shape = SubResource("RectangleShape2D_pxo21")
 [node name="InteractionArea" type="Area2D" parent="Puerta9" unique_id=89796079]
 position = Vector2(-134.25568, -82.948235)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Puerta9/InteractionArea" unique_id=238728064]
-position = Vector2(134, 82)
-shape = SubResource("CircleShape2D_tfucu")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Puerta9/InteractionArea" unique_id=765677416]
+position = Vector2(134, 82.5)
+shape = SubResource("RectangleShape2D_ivps1")
 
 [node name="Puerta10" type="StaticBody2D" parent="." unique_id=1349836172]
 position = Vector2(188.00003, -109)
@@ -332,9 +332,9 @@ shape = SubResource("RectangleShape2D_pxo21")
 [node name="InteractionArea" type="Area2D" parent="Puerta10" unique_id=559040595]
 position = Vector2(-134.25568, -82.948235)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Puerta10/InteractionArea" unique_id=1427930517]
-position = Vector2(134, 82)
-shape = SubResource("CircleShape2D_tfucu")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Puerta10/InteractionArea" unique_id=1396536958]
+position = Vector2(134, 82.5)
+shape = SubResource("RectangleShape2D_ivps1")
 
 [node name="Puerta11" type="StaticBody2D" parent="." unique_id=729744040]
 position = Vector2(107.00003, -107.99999)
@@ -353,9 +353,9 @@ shape = SubResource("RectangleShape2D_pxo21")
 [node name="InteractionArea" type="Area2D" parent="Puerta11" unique_id=1883159727]
 position = Vector2(-134.25568, -82.948235)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Puerta11/InteractionArea" unique_id=318646475]
-position = Vector2(134, 82)
-shape = SubResource("CircleShape2D_tfucu")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Puerta11/InteractionArea" unique_id=140111540]
+position = Vector2(134, 82.5)
+shape = SubResource("RectangleShape2D_ivps1")
 
 [node name="Puerta12" type="StaticBody2D" parent="." unique_id=1211972410]
 position = Vector2(26, -109)
@@ -374,9 +374,9 @@ shape = SubResource("RectangleShape2D_pxo21")
 [node name="InteractionArea" type="Area2D" parent="Puerta12" unique_id=1185252819]
 position = Vector2(-134.25568, -82.948235)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Puerta12/InteractionArea" unique_id=1230967417]
-position = Vector2(134, 82)
-shape = SubResource("CircleShape2D_tfucu")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Puerta12/InteractionArea" unique_id=1822446466]
+position = Vector2(134, 82.5)
+shape = SubResource("RectangleShape2D_ivps1")
 
 [node name="Puerta3" type="StaticBody2D" parent="." unique_id=220637811]
 position = Vector2(448, -2)
@@ -395,9 +395,9 @@ shape = SubResource("RectangleShape2D_pxo21")
 [node name="InteractionArea" type="Area2D" parent="Puerta3" unique_id=1429520258]
 position = Vector2(-134.25568, -82.948235)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Puerta3/InteractionArea" unique_id=1751120380]
-position = Vector2(134, 82)
-shape = SubResource("CircleShape2D_tfucu")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Puerta3/InteractionArea" unique_id=1586072055]
+position = Vector2(134, 82.5)
+shape = SubResource("RectangleShape2D_ivps1")
 
 [node name="Puerta6" type="StaticBody2D" parent="." unique_id=252588277]
 position = Vector2(-250.00003, -132.99998)
@@ -416,9 +416,9 @@ shape = SubResource("RectangleShape2D_pxo21")
 [node name="InteractionArea" type="Area2D" parent="Puerta6" unique_id=1471607184]
 position = Vector2(-134.25568, -82.948235)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Puerta6/InteractionArea" unique_id=450724990]
-position = Vector2(134, 82)
-shape = SubResource("CircleShape2D_tfucu")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Puerta6/InteractionArea" unique_id=1785990931]
+position = Vector2(134, 82.5)
+shape = SubResource("RectangleShape2D_ivps1")
 
 [node name="sangre3" type="Node" parent="." unique_id=1318478866]
 

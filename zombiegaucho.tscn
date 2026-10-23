@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://7vh3tjqvhco4"]
 
 [ext_resource type="Script" uid="uid://dm5uek47eeh8w" path="res://zombiegaucho.gd" id="1_eun8q"]
+[ext_resource type="Texture2D" uid="uid://cgkpf1didu84b" path="res://sombra/Sombra.png" id="2_1umbl"]
 [ext_resource type="Texture2D" uid="uid://8ea4j6mus80a" path="res://Zombies-20261005T172857Z-1-001/Zombies/hurt zombie.png" id="2_hoy8c"]
 [ext_resource type="Texture2D" uid="uid://c8ch4dupch835" path="res://Zombies-20261005T172857Z-1-001/Zombies/Zombie (Gaucho)(Walk)(13x13).png" id="2_mcbk1"]
 [ext_resource type="Texture2D" uid="uid://cq2xcleub3kjw" path="res://Zombies-20261005T172857Z-1-001/Zombies/death zombie.png" id="3_hoy8c"]
@@ -110,6 +111,11 @@ radius = 105.076164
 [node name="Zombiegaucho" type="CharacterBody2D" unique_id=351470608]
 position = Vector2(124, 83)
 script = ExtResource("1_eun8q")
+
+[node name="Sombra" type="Sprite2D" parent="." unique_id=1393845900]
+position = Vector2(0, 6)
+scale = Vector2(0.9012804, 0.85149395)
+texture = ExtResource("2_1umbl")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1099926148]
 sprite_frames = SubResource("SpriteFrames_tfucu")

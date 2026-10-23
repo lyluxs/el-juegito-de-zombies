@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://d1roton4q51y"]
 
 [ext_resource type="Script" uid="uid://boudm1wbau0p" path="res://zombie.gd" id="1_roy8y"]
+[ext_resource type="Texture2D" uid="uid://cgkpf1didu84b" path="res://sombra/Sombra.png" id="2_7nqyo"]
 [ext_resource type="Texture2D" uid="uid://8ea4j6mus80a" path="res://Zombies-20261005T172857Z-1-001/Zombies/hurt zombie.png" id="2_jmu02"]
 [ext_resource type="Texture2D" uid="uid://3m7eip0ix2vn" path="res://Zombies-20261005T172857Z-1-001/Zombies/Zombie (Amarillo)(Walk)(10x11).png" id="2_roy8y"]
 [ext_resource type="Texture2D" uid="uid://cq2xcleub3kjw" path="res://Zombies-20261005T172857Z-1-001/Zombies/death zombie.png" id="3_eseir"]
@@ -109,6 +110,11 @@ radius = 8.062258
 
 [node name="Zombie" type="CharacterBody2D" unique_id=467401612]
 script = ExtResource("1_roy8y")
+
+[node name="Sombra" type="Sprite2D" parent="." unique_id=1486838747]
+position = Vector2(0, 6)
+scale = Vector2(0.9012804, 0.85149395)
+texture = ExtResource("2_7nqyo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1545350068]
 position = Vector2(1, -2.842171e-14)

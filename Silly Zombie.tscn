@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://7il8iqb1uxf2" path="res://silly_zombie.gd" id="1_qbvfi"]
 [ext_resource type="Texture2D" uid="uid://oxkvoqjm08ev" path="res://Zombies-20261005T172857Z-1-001/Zombies/Zombie Silly (Blanco)(Walk)(13x14).png" id="1_vymha"]
 [ext_resource type="Texture2D" uid="uid://8ea4j6mus80a" path="res://Zombies-20261005T172857Z-1-001/Zombies/hurt zombie.png" id="2_euh2t"]
+[ext_resource type="Texture2D" uid="uid://cgkpf1didu84b" path="res://sombra/Sombra.png" id="2_xbmuu"]
 [ext_resource type="Texture2D" uid="uid://cq2xcleub3kjw" path="res://Zombies-20261005T172857Z-1-001/Zombies/death zombie.png" id="3_l2md1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ljj7h"]
@@ -109,6 +110,11 @@ radius = 42.579338
 
 [node name="SillyZombie" type="CharacterBody2D" unique_id=1314253695]
 script = ExtResource("1_qbvfi")
+
+[node name="Sombra" type="Sprite2D" parent="." unique_id=1995960196]
+position = Vector2(0, 6)
+scale = Vector2(0.9012804, 0.85149395)
+texture = ExtResource("2_xbmuu")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=100082954]
 sprite_frames = SubResource("SpriteFrames_tfucu")
