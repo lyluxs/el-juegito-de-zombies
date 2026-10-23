@@ -1,0 +1,159 @@
+[gd_scene format=3 uid="uid://22uhe20j1xk1"]
+
+[ext_resource type="Script" uid="uid://cuxb3i03hntge" path="res://alpha_completada.gd" id="1_7n16j"]
+[ext_resource type="FontFile" uid="uid://c6cbq083ogadw" path="res://fuentes/Press_Start_2P/PressStart2P-Regular.ttf" id="2_1rpjv"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_tfucu"]
+font = ExtResource("2_1rpjv")
+font_size = 12
+
+[sub_resource type="LabelSettings" id="LabelSettings_47mtk"]
+font = ExtResource("2_1rpjv")
+font_size = 9
+
+[sub_resource type="LabelSettings" id="LabelSettings_xfeux"]
+font = ExtResource("2_1rpjv")
+font_size = 7
+font_color = Color(1, 1, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_pxo21"]
+font = ExtResource("2_1rpjv")
+font_size = 6
+
+[sub_resource type="LabelSettings" id="LabelSettings_7n16j"]
+font = ExtResource("2_1rpjv")
+font_size = 7
+font_color = Color(1, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_1rpjv"]
+font = ExtResource("2_1rpjv")
+font_size = 7
+
+[sub_resource type="LabelSettings" id="LabelSettings_rdlj3"]
+font = ExtResource("2_1rpjv")
+font_size = 7
+
+[node name="AlphaCompletada" type="Control" unique_id=94147753]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 239.0
+offset_bottom = 159.0
+script = ExtResource("1_7n16j")
+
+[node name="Fondo" type="ColorRect" parent="." unique_id=690947722]
+layout_mode = 0
+offset_right = 239.0
+offset_bottom = 160.0
+color = Color(0.078431375, 0.20392157, 0.39215687, 1)
+
+[node name="Titulo" type="Label" parent="." unique_id=309033590]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 14.0
+offset_right = 247.0
+offset_bottom = 53.0
+text = "Alpha Completada"
+label_settings = SubResource("LabelSettings_tfucu")
+horizontal_alignment = 1
+
+[node name="Gracias" type="Label" parent="." unique_id=770965258]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 79.0
+offset_right = 257.0
+offset_bottom = 118.0
+text = "Gracias por probar"
+label_settings = SubResource("LabelSettings_47mtk")
+horizontal_alignment = 1
+
+[node name="Creditos" type="VBoxContainer" parent="." unique_id=1380156604]
+layout_mode = 0
+offset_left = 63.0
+offset_top = 82.0
+offset_right = 181.0
+offset_bottom = 164.0
+
+[node name="Label" type="Label" parent="Creditos" unique_id=610176696]
+layout_mode = 2
+text = "PROGRAMADORA"
+label_settings = SubResource("LabelSettings_xfeux")
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Creditos" unique_id=1581656318]
+layout_mode = 2
+text = "Lyluxs
+(Lucía Martínez)"
+label_settings = SubResource("LabelSettings_pxo21")
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="Creditos" unique_id=1197925962]
+layout_mode = 2
+text = "ARTE"
+label_settings = SubResource("LabelSettings_xfeux")
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="Creditos" unique_id=2055223709]
+layout_mode = 2
+text = "Bruno de Brun"
+label_settings = SubResource("LabelSettings_pxo21")
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="Creditos" unique_id=561936765]
+layout_mode = 2
+text = "Teo Raimundez"
+label_settings = SubResource("LabelSettings_pxo21")
+horizontal_alignment = 1
+
+[node name="Label6" type="Label" parent="Creditos" unique_id=1451013267]
+layout_mode = 2
+text = "GAME DESIGN"
+label_settings = SubResource("LabelSettings_xfeux")
+horizontal_alignment = 1
+
+[node name="Label7" type="Label" parent="Creditos" unique_id=2134539178]
+layout_mode = 2
+text = "Facundo Yarza"
+label_settings = SubResource("LabelSettings_pxo21")
+horizontal_alignment = 1
+
+[node name="Label11" type="Label" parent="Creditos" unique_id=22684421]
+layout_mode = 2
+text = "CRAZY JHON
+
+
+
+
+
+
+"
+label_settings = SubResource("LabelSettings_7n16j")
+horizontal_alignment = 1
+
+[node name="Label10" type="Label" parent="Creditos" unique_id=211154218]
+layout_mode = 2
+text = "Agradecimientos
+a las personas que 
+ayudaron a testear
+la alpha
+"
+label_settings = SubResource("LabelSettings_1rpjv")
+horizontal_alignment = 1
+
+[node name="Label9" type="Label" parent="Creditos" unique_id=648818250]
+layout_mode = 2
+text = "Y muchas gracias 
+a los profesores
+por la ayuda
+;)
+
+
+
+"
+label_settings = SubResource("LabelSettings_rdlj3")
+horizontal_alignment = 1
+
+[node name="Label8" type="Label" parent="Creditos" unique_id=1397550596]
+layout_mode = 2
+text = "Gracias por probar!"
+label_settings = SubResource("LabelSettings_xfeux")
+horizontal_alignment = 1
