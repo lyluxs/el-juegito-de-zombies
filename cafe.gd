@@ -4,7 +4,7 @@ extends StaticBody2D
 var jugador_cerca: bool = false
 var recogido: bool = false
 
-@export var aumento_velocidad: float = 40.0
+@export var aumento_velocidad: float = 90.0
 @export var duracion: float = 5.0
 
 @onready var sprite: Sprite2D = $Sprite2D

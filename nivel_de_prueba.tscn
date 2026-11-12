@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://br3hww2g44lqk" path="res://nivel_de_prueba.gd" id="1_gdnvi"]
 [ext_resource type="PackedScene" uid="uid://c5ffyfve1y2hj" path="res://map.tscn" id="1_xe7la"]
+[ext_resource type="Script" uid="uid://diqmu0jhok8sr" path="res://camera_2d.gd" id="2_0q6hu"]
 [ext_resource type="PackedScene" uid="uid://c02eep3h2lnx" path="res://player.tscn" id="2_5mnk7"]
 [ext_resource type="Script" uid="uid://cnhfgelav3i7a" path="res://cafe.gd" id="3_dpnas"]
 [ext_resource type="Texture2D" uid="uid://1wi0avfofr3l" path="res://Interactuales-20261005T172909Z-1-001/cafe.png" id="4_gdnvi"]
@@ -11,14 +12,13 @@
 [ext_resource type="PackedScene" uid="uid://d1roton4q51y" path="res://zombie.tscn" id="5_ym4tk"]
 [ext_resource type="PackedScene" uid="uid://b2pqbhkyk7ct8" path="res://sistema_de_vidas_grafico.tscn" id="7_i454i"]
 [ext_resource type="Script" uid="uid://dxrsrlv6mq205" path="res://mensajes.gd" id="11_peshc"]
-[ext_resource type="Texture2D" uid="uid://c8ch4dupch835" path="res://Zombies-20261005T172857Z-1-001/Zombies/Zombie (Gaucho)(Walk)(13x13).png" id="12_7ah6t"]
 [ext_resource type="FontFile" uid="uid://c6cbq083ogadw" path="res://fuentestexto/Press_Start_2P/PressStart2P-Regular.ttf" id="12_y0745"]
 [ext_resource type="Script" uid="uid://4jeedpswv156" path="res://area_final.gd" id="13_5nfyk"]
 [ext_resource type="Texture2D" uid="uid://exfccww52q4r" path="res://Interfaz/contador zombies resolucion bien.png.png" id="13_ej53q"]
+[ext_resource type="SpriteFrames" uid="uid://bnq85s7ofomhs" path="res://zombienormal.tres" id="13_w0py1"]
 [ext_resource type="Script" uid="uid://dpk13sdh86vwc" path="res://texture_rect.gd" id="14_5nfyk"]
-[ext_resource type="PackedScene" uid="uid://b1h62pyfq0a5f" path="res://zombie_fede.tscn" id="16_uyoem"]
-[ext_resource type="PackedScene" uid="uid://q77dphka2i8w" path="res://zombie_javi.tscn" id="17_pa1on"]
-[ext_resource type="PackedScene" uid="uid://cuq76quajip6s" path="res://zombie_franco.tscn" id="18_w0py1"]
+[ext_resource type="Texture2D" uid="uid://oxkvoqjm08ev" path="res://Zombies-20261005T172857Z-1-001/Zombies/Zombie Silly (Blanco)(Walk)(13x14).png" id="15_7ah6t"]
+[ext_resource type="PackedScene" uid="uid://bg41i2yct0ygx" path="res://zombie_jefe.tscn" id="15_peg22"]
 [ext_resource type="Script" uid="uid://cg44lcj0ojldv" path="res://tutorial.gd" id="19_pa1on"]
 [ext_resource type="Script" uid="uid://7pa8awu2v3rg" path="res://mira.gd" id="20_ejfy6"]
 [ext_resource type="Texture2D" uid="uid://dmom6t7gmbami" path="res://Interfaz/Mira (Desmarcado).png" id="21_ejfy6"]
@@ -35,54 +35,55 @@ size = Vector2(5, 5)
 [sub_resource type="CircleShape2D" id="CircleShape2D_tfucu"]
 radius = 35.35534
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_0q6hu"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ntk2"]
 atlas = ExtResource("4_qkoo6")
 region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_qkoo6"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_qyufw"]
 atlas = ExtResource("4_qkoo6")
 region = Rect2(32, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_r4tps"]
-atlas = ExtResource("12_7ah6t")
-region = Rect2(0, 0, 13, 13)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_28swu"]
-atlas = ExtResource("12_7ah6t")
-region = Rect2(13, 0, 13, 13)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_emciw"]
-atlas = ExtResource("12_7ah6t")
-region = Rect2(0, 0, 13, 13)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_a761b"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_jdfin"]
 atlas = ExtResource("5_r4tps")
 region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8dyap"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_w811k"]
 atlas = ExtResource("5_r4tps")
 region = Rect2(32, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_86jck"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_kluo5"]
 atlas = ExtResource("5_r4tps")
 region = Rect2(64, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_gtr1s"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_alv88"]
 atlas = ExtResource("5_r4tps")
 region = Rect2(96, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_mdryw"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_t7vrf"]
 atlas = ExtResource("5_r4tps")
 region = Rect2(128, 0, 32, 32)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_w0py1"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_rv685"]
+atlas = ExtResource("15_7ah6t")
+region = Rect2(0, 0, 13, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_34ous"]
+atlas = ExtResource("15_7ah6t")
+region = Rect2(13, 0, 13, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ao8eq"]
+atlas = ExtResource("15_7ah6t")
+region = Rect2(0, 0, 13, 14)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7ah6t"]
+resource_local_to_scene = true
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_0q6hu")
+"texture": SubResource("AtlasTexture_4ntk2")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_qkoo6")
+"texture": SubResource("AtlasTexture_qyufw")
 }],
 "loop": 0,
 "name": &"Damage",
@@ -90,10 +91,30 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_r4tps")
+"texture": SubResource("AtlasTexture_jdfin")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_28swu")
+"texture": SubResource("AtlasTexture_w811k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kluo5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_alv88")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t7vrf")
+}],
+"loop": 0,
+"name": &"Death",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rv685")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_34ous")
 }],
 "loop": 1,
 "name": &"Walk",
@@ -101,31 +122,119 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_emciw")
+"texture": SubResource("AtlasTexture_ao8eq")
 }],
 "loop": 1,
 "name": &"idle",
 "speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0q6hu"]
+resource_local_to_scene = true
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ntk2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qyufw")
+}],
+"loop": 0,
+"name": &"Damage",
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_a761b")
+"texture": SubResource("AtlasTexture_jdfin")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_8dyap")
+"texture": SubResource("AtlasTexture_w811k")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_86jck")
+"texture": SubResource("AtlasTexture_kluo5")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_gtr1s")
+"texture": SubResource("AtlasTexture_alv88")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_mdryw")
+"texture": SubResource("AtlasTexture_t7vrf")
 }],
 "loop": 0,
-"name": &"new_animation",
-"speed": 11.0
+"name": &"Death",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rv685")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_34ous")
+}],
+"loop": 1,
+"name": &"Walk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ao8eq")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qkoo6"]
+resource_local_to_scene = true
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ntk2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qyufw")
+}],
+"loop": 0,
+"name": &"Damage",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jdfin")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w811k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kluo5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_alv88")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t7vrf")
+}],
+"loop": 0,
+"name": &"Death",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rv685")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_34ous")
+}],
+"loop": 1,
+"name": &"Walk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ao8eq")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tfucu"]
@@ -144,16 +253,17 @@ script = ExtResource("1_gdnvi")
 
 [node name="Map" parent="." unique_id=1224895729 instance=ExtResource("1_xe7la")]
 
-[node name="Zombie" parent="." unique_id=467401612 instance=ExtResource("5_ym4tk")]
-position = Vector2(101, 37)
+[node name="UI" type="Node2D" parent="." unique_id=1083550933]
 
-[node name="Player" parent="." unique_id=88376537 instance=ExtResource("2_5mnk7")]
-position = Vector2(39, 85)
+[node name="Camera2D" type="Camera2D" parent="UI" unique_id=807782915 node_paths=PackedStringArray("jugador")]
+position = Vector2(39, 86)
+script = ExtResource("2_0q6hu")
+jugador = NodePath("../../Player")
 
-[node name="Camera2D" type="Camera2D" parent="Player" unique_id=807782915]
-position = Vector2(0, 1)
+[node name="Sistema de vidas grafico" parent="UI/Camera2D" unique_id=2002290705 node_paths=PackedStringArray("jugador") instance=ExtResource("7_i454i")]
+jugador = NodePath("../../../Player")
 
-[node name="ContadorDeZombies" type="TextureRect" parent="Player/Camera2D" unique_id=364873802]
+[node name="ContadorDeZombies" type="TextureRect" parent="UI/Camera2D" unique_id=364873802]
 offset_left = 48.0
 offset_top = 30.0
 offset_right = 98.0
@@ -162,7 +272,7 @@ scale = Vector2(1.5672593, 1.4284873)
 texture = ExtResource("13_ej53q")
 script = ExtResource("14_5nfyk")
 
-[node name="NumeroZombies" type="Label" parent="Player/Camera2D/ContadorDeZombies" unique_id=1786953517]
+[node name="NumeroZombies" type="Label" parent="UI/Camera2D/ContadorDeZombies" unique_id=1786953517]
 layout_mode = 0
 offset_left = 26.0
 offset_top = 23.0
@@ -170,6 +280,12 @@ offset_right = 66.0
 offset_bottom = 46.0
 text = "0"
 label_settings = SubResource("LabelSettings_47mtk")
+
+[node name="Player" parent="." unique_id=88376537 instance=ExtResource("2_5mnk7")]
+position = Vector2(45, 81)
+
+[node name="Zombie" parent="." unique_id=467401612 instance=ExtResource("5_ym4tk")]
+position = Vector2(101, 37)
 
 [node name="Cafe3" type="StaticBody2D" parent="." unique_id=1001779494]
 position = Vector2(421, 101)
@@ -226,16 +342,32 @@ position = Vector2(211, 59)
 position = Vector2(211, 99)
 velocidad = 50.0
 vida = 4
+tipo_skin = 1
+skins = Array[SpriteFrames]([null, SubResource("SpriteFrames_7ah6t"), null, null, null, null, null])
 
 [node name="Zona3" type="Node2D" parent="." unique_id=1828645731]
 position = Vector2(-18, -5)
 
-[node name="Zombie" parent="Zona3" unique_id=1688558736 instance=ExtResource("5_ym4tk")]
-position = Vector2(430, 88)
-tipo_skin = 5
-skins = Array[SpriteFrames]([SubResource("SpriteFrames_w0py1")])
+[node name="Zombie" parent="Zona3" unique_id=1780253565 instance=ExtResource("5_ym4tk")]
+position = Vector2(387, 99)
+velocidad = 50.0
+tiempo_entre_ataques = 1.0
+tipo_skin = 1
+skins = Array[SpriteFrames]([null, SubResource("SpriteFrames_0q6hu"), null, null, null, null, null])
 
 [node name="Zona4" type="Node2D" parent="." unique_id=1952825991]
+
+[node name="Zombie2" parent="Zona4" unique_id=890656657 instance=ExtResource("5_ym4tk")]
+position = Vector2(502, 33)
+velocidad = 50.0
+tiempo_entre_ataques = 1.0
+tipo_skin = 1
+skins = Array[SpriteFrames]([null, SubResource("SpriteFrames_qkoo6"), null, null, null, null, null])
+
+[node name="Zombie" parent="Zona4" unique_id=85013222 instance=ExtResource("5_ym4tk")]
+position = Vector2(431, 33)
+vida = 5
+skins = Array[SpriteFrames]([ExtResource("13_w0py1"), null, null, null, null, null, null])
 
 [node name="Zona5" type="Node2D" parent="." unique_id=131063525]
 
@@ -243,14 +375,15 @@ skins = Array[SpriteFrames]([SubResource("SpriteFrames_w0py1")])
 
 [node name="Zona7" type="Node2D" parent="." unique_id=1488573777]
 
+[node name="ZombieJefe" parent="Zona7" unique_id=1513743167 instance=ExtResource("15_peg22")]
+position = Vector2(-395, -110)
+
 [node name="AreaFinal" type="Area2D" parent="." unique_id=535373858]
 position = Vector2(-520, -136)
 script = ExtResource("13_5nfyk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaFinal" unique_id=836339082]
 shape = SubResource("RectangleShape2D_tfucu")
-
-[node name="Sistema de vidas grafico" parent="." unique_id=2002290705 instance=ExtResource("7_i454i")]
 
 [node name="Mensajes" type="CanvasLayer" parent="." unique_id=880963318]
 script = ExtResource("11_peshc")
@@ -265,15 +398,6 @@ scale = Vector2(0.51983947, 0.61382216)
 text = "     Nuh huh primero
   mata a todos los zombies"
 label_settings = SubResource("LabelSettings_tfucu")
-
-[node name="ZombieJavi" parent="." unique_id=1985920932 groups=["zombies"] instance=ExtResource("17_pa1on")]
-position = Vector2(-273, 383)
-
-[node name="ZombieFranco" parent="." unique_id=1322386328 groups=["zombies"] instance=ExtResource("18_w0py1")]
-position = Vector2(-111, 426)
-
-[node name="ZombieFede" parent="." unique_id=1780298938 groups=["zombies"] instance=ExtResource("16_uyoem")]
-position = Vector2(-401, 478)
 
 [node name="Tutorial" type="CanvasLayer" parent="." unique_id=1898073051]
 script = ExtResource("19_pa1on")

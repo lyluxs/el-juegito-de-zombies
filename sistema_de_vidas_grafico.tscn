@@ -12,10 +12,11 @@ corazon_mitad = ExtResource("3_12nmy")
 corazon_vacio = ExtResource("4_thmoc")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=128366517]
-offset_left = 4.0
-offset_right = 165.0
+offset_left = 2.0
+offset_right = 175.0
 offset_bottom = 40.0
-scale = Vector2(0.21099962, 0.26505247)
+scale = Vector2(0.2512786, 0.32260308)
+theme_override_constants/separation = 10
 
 [node name="Heart1" type="TextureRect" parent="HBoxContainer" unique_id=2071591310]
 layout_mode = 2

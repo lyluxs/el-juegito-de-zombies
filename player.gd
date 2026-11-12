@@ -3,7 +3,7 @@ extends CharacterBody2D
 
 signal vida_cambiada(vida: int)
 
-@export var speed := 50.0
+@export var speed := 80.0
 
 var vida_maxima: int = 6
 var vida_actual: int = 6

@@ -1,6 +1,8 @@
 
 extends CanvasLayer
 
+@export var jugador: Node2D
+
 @export var corazon_lleno: Texture2D
 @export var corazon_mitad: Texture2D
 @export var corazon_vacio: Texture2D
@@ -13,13 +15,11 @@ extends CanvasLayer
 
 
 func _ready():
-	var jugador = get_tree().get_first_node_in_group("player")
-
 	if jugador:
 		jugador.vida_cambiada.connect(actualizar_vida)
 		actualizar_vida(jugador.vida_actual)
 	else:
-		push_warning("No se encontró al jugador en el grupo player")
+		push_warning("No asignaste el jugador en el Inspector")
 
 
 func actualizar_vida(vida: int):

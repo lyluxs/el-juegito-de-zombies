@@ -3,12 +3,10 @@ extends CharacterBody2D
 
 signal zombie_muerto
 
-
 @export_group("Estadísticas")
 @export var velocidad: float = 30.0
 @export var vida: int = 3
 @export var tiempo_entre_ataques: float = 2.0
-
 
 @export_group("Apariencia")
 @export_enum(
@@ -18,12 +16,11 @@ signal zombie_muerto
 	"Franco",
 	"Fede",
 	"Gaucho",
-    "Amarillo"
+	"Amarillo"
 )
 var tipo_skin: int = 0
 
 @export var skins: Array[SpriteFrames] = []
-
 
 var objetivo: Node2D = null
 var jugador_en_rango: Node2D = null
@@ -34,16 +31,30 @@ var muriendo: bool = false
 
 var perseguir_por_disparo: bool = false
 
-
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
 
 func _ready() -> void:
-
-	if tipo_skin < skins.size() and skins[tipo_skin] != null:
-		animated_sprite.sprite_frames = skins[tipo_skin]
-
+	aplicar_skin()
 	animated_sprite.play("idle")
+
+
+func aplicar_skin() -> void:
+
+	print("Seleccionando skin: ", tipo_skin)
+	print("Cantidad de skins: ", skins.size())
+
+	if tipo_skin < 0 or tipo_skin >= skins.size():
+		push_warning("El índice de la skin no existe")
+		return
+
+	if skins[tipo_skin] == null:
+		push_warning("La skin seleccionada está vacía")
+		return
+
+	animated_sprite.sprite_frames = skins[tipo_skin]
+
+	print("Skin aplicada correctamente: ", tipo_skin)
 
 
 func _physics_process(_delta: float) -> void:
@@ -65,6 +76,7 @@ func _physics_process(_delta: float) -> void:
 
 		velocity = direccion * velocidad
 		move_and_slide()
+
 		if direccion.x != 0:
 			animated_sprite.flip_h = direccion.x > 0
 
@@ -137,7 +149,6 @@ func recibir_golpe() -> void:
 	if is_instance_valid(jugador) and jugador is Node2D:
 		objetivo = jugador
 		perseguir_por_disparo = true
-
 		print("¡ZOMBI ALERTADO!")
 
 	recibiendo_dano = true
@@ -156,7 +167,6 @@ func recibir_golpe() -> void:
 		return
 
 	recibiendo_dano = false
-
 
 
 func morir() -> void:
