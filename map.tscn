@@ -137,7 +137,7 @@ animations = [{
 size = Vector2(6, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ivps1"]
-size = Vector2(10, 21)
+size = Vector2(17, 21)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r2o42"]
 size = Vector2(23, 15)
@@ -239,7 +239,7 @@ shape = SubResource("RectangleShape2D_pxo21")
 [node name="InteractionArea" type="Area2D" parent="Puerta" unique_id=1961178491]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Puerta/InteractionArea" unique_id=1889241245]
-position = Vector2(134, 82.5)
+position = Vector2(130.5, 82.5)
 shape = SubResource("RectangleShape2D_ivps1")
 
 [node name="Puerta2" type="StaticBody2D" parent="." unique_id=1999019461]

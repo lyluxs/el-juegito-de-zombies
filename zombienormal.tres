@@ -1,0 +1,91 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://bnq85s7ofomhs"]
+
+[ext_resource type="Texture2D" uid="uid://8ea4j6mus80a" path="res://Zombies-20261005T172857Z-1-001/Zombies/hurt zombie.png" id="1_g88nl"]
+[ext_resource type="Texture2D" uid="uid://cq2xcleub3kjw" path="res://Zombies-20261005T172857Z-1-001/Zombies/death zombie.png" id="2_44l4q"]
+[ext_resource type="Texture2D" uid="uid://3m7eip0ix2vn" path="res://Zombies-20261005T172857Z-1-001/Zombies/Zombie (Amarillo)(Walk)(10x11).png" id="3_nsph0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_emciw"]
+atlas = ExtResource("1_g88nl")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a761b"]
+atlas = ExtResource("1_g88nl")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_86jck"]
+atlas = ExtResource("2_44l4q")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gtr1s"]
+atlas = ExtResource("2_44l4q")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mdryw"]
+atlas = ExtResource("2_44l4q")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4l3va"]
+atlas = ExtResource("2_44l4q")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g88nl"]
+atlas = ExtResource("3_nsph0")
+region = Rect2(0, 0, 10, 11)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_44l4q"]
+atlas = ExtResource("3_nsph0")
+region = Rect2(10, 0, 10, 11)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nsph0"]
+atlas = ExtResource("3_nsph0")
+region = Rect2(0, 0, 10, 11)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_emciw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a761b")
+}],
+"loop": 0,
+"name": &"Damage",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_86jck")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gtr1s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mdryw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4l3va")
+}],
+"loop": 0,
+"name": &"Death",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g88nl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_44l4q")
+}],
+"loop": 0,
+"name": &"Walk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nsph0")
+}],
+"loop": 0,
+"name": &"idle",
+"speed": 5.0
+}]

@@ -7,8 +7,8 @@
 script = ExtResource("1_o2wld")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1527158817]
-position = Vector2(1, 0)
+position = Vector2(12, 0)
 texture = ExtResource("1_swcir")
 
 [node name="BulletSpawn" type="Marker2D" parent="." unique_id=1779563800]
-position = Vector2(4, 0)
+position = Vector2(10, 1)

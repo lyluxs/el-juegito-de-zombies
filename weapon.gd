@@ -10,20 +10,26 @@ extends Node2D
 var can_shoot: bool = true
 
 
-func _process(_delta):
+func _process(_delta: float) -> void:
+
 	var mouse_pos = get_global_mouse_position()
 	var direction = mouse_pos - global_position
 
+	# Apuntado de 360 grados
 	rotation = direction.angle()
 
+	# Evitar que el arma quede invertida
 	sprite.flip_v = direction.x < 0
 
+	# Mantener el arma delante del jugador
+	z_index = 1
 
+	# Disparar
 	if Input.is_action_just_pressed("shoot") and can_shoot:
 		shoot()
 
 
-func shoot():
+func shoot() -> void:
 	if bullet_scene == null:
 		print("ERROR: No asignaste bullet.tscn")
 		return

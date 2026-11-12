@@ -1,84 +1,144 @@
 
 extends CharacterBody2D
+
 signal zombie_muerto
+
+
+@export_group("Estadísticas")
 @export var velocidad: float = 30.0
 @export var vida: int = 3
 @export var tiempo_entre_ataques: float = 2.0
 
+
+@export_group("Apariencia")
+@export_enum(
+	"Normal",
+	"Silly",
+	"Javi",
+	"Franco",
+	"Fede",
+	"Gaucho",
+    "Amarillo"
+)
+var tipo_skin: int = 0
+
+@export var skins: Array[SpriteFrames] = []
+
+
 var objetivo: Node2D = null
 var jugador_en_rango: Node2D = null
+
 var puede_atacar: bool = true
 var recibiendo_dano: bool = false
 var muriendo: bool = false
 
+var perseguir_por_disparo: bool = false
+
+
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
 
-func _physics_process(_delta):
+func _ready() -> void:
+
+	if tipo_skin < skins.size() and skins[tipo_skin] != null:
+		animated_sprite.sprite_frames = skins[tipo_skin]
+
+	animated_sprite.play("idle")
+
+
+func _physics_process(_delta: float) -> void:
+
 	if recibiendo_dano or muriendo:
 		velocity = Vector2.ZERO
 		move_and_slide()
 		return
 
+	if not is_instance_valid(objetivo):
+		objetivo = null
+		perseguir_por_disparo = false
+
 	if is_instance_valid(objetivo):
+
 		var direccion = global_position.direction_to(
 			objetivo.global_position
 		)
 
 		velocity = direccion * velocidad
 		move_and_slide()
+		if direccion.x != 0:
+			animated_sprite.flip_h = direccion.x > 0
+
 		animated_sprite.play("Walk")
+
 	else:
-		objetivo = null
 		velocity = Vector2.ZERO
 		move_and_slide()
+
 		animated_sprite.play("idle")
 
 
-func _on_detection_area_body_entered(body):
+func _on_detection_area_body_entered(body: Node2D) -> void:
+
 	if body.is_in_group("player") and not muriendo:
 		objetivo = body
 		print("PLAYER DETECTADO")
 
 
-func _on_detection_area_body_exited(body):
+func _on_detection_area_body_exited(body: Node2D) -> void:
+
 	if body == objetivo:
-		objetivo = null
-		print("PLAYER SALIÓ DEL ÁREA")
+		if not perseguir_por_disparo:
+			objetivo = null
+			print("PLAYER SALIÓ DEL ÁREA")
 
 
-func _on_attack_area_body_entered(body):
+func _on_attack_area_body_entered(body: Node2D) -> void:
+
 	if body.is_in_group("player") and not muriendo:
 		jugador_en_rango = body
 		atacar_repetidamente()
 
 
-func _on_attack_area_body_exited(body):
+func _on_attack_area_body_exited(body: Node2D) -> void:
+
 	if body == jugador_en_rango:
 		jugador_en_rango = null
 
 
-func atacar_repetidamente():
+func atacar_repetidamente() -> void:
+
 	if not puede_atacar or muriendo:
 		return
 
 	puede_atacar = false
 
 	while is_inside_tree() and not muriendo:
+
 		if not is_instance_valid(jugador_en_rango):
 			break
 
 		if jugador_en_rango.has_method("recibir_golpe"):
 			jugador_en_rango.recibir_golpe()
 
-		await get_tree().create_timer(tiempo_entre_ataques).timeout
+		await get_tree().create_timer(
+			tiempo_entre_ataques
+		).timeout
 
 	puede_atacar = true
 
 
-func recibir_golpe():
+func recibir_golpe() -> void:
+
 	if vida <= 0 or recibiendo_dano or muriendo:
 		return
+
+	var jugador = get_tree().get_first_node_in_group("player")
+
+	if is_instance_valid(jugador) and jugador is Node2D:
+		objetivo = jugador
+		perseguir_por_disparo = true
+
+		print("¡ZOMBI ALERTADO!")
 
 	recibiendo_dano = true
 	vida -= 1
@@ -98,13 +158,17 @@ func recibir_golpe():
 	recibiendo_dano = false
 
 
-func morir():
+
+func morir() -> void:
+
 	if muriendo:
 		return
 
 	muriendo = true
 	recibiendo_dano = false
+
 	zombie_muerto.emit()
+
 	objetivo = null
 	jugador_en_rango = null
 	velocity = Vector2.ZERO
@@ -122,6 +186,7 @@ func morir():
 		queue_free()
 
 
-func _exit_tree():
+func _exit_tree() -> void:
+
 	jugador_en_rango = null
 	objetivo = null

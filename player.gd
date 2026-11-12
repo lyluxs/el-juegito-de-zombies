@@ -21,6 +21,7 @@ func _physics_process(_delta: float) -> void:
 		velocity = Vector2.ZERO
 		return
 
+	# Movimiento
 	var direction = Input.get_vector(
 		"move_left",
 		"move_right",
@@ -28,16 +29,21 @@ func _physics_process(_delta: float) -> void:
 		"move_down"
 	)
 
-	if direction.x > 0:
+	# Orientación según el cursor del mouse
+	var mouse_direction = get_global_mouse_position() - global_position
+
+	if mouse_direction.x > 0:
 		$AnimatedSprite2D.flip_h = false
-	elif direction.x < 0:
+	elif mouse_direction.x < 0:
 		$AnimatedSprite2D.flip_h = true
 
+	# Animaciones
 	if direction != Vector2.ZERO:
 		$AnimatedSprite2D.play("walk")
 	else:
 		$AnimatedSprite2D.play("idle")
 
+	# Aplicar movimiento
 	velocity = direction * speed
 	move_and_slide()
 
@@ -64,7 +70,7 @@ func recibir_golpe() -> void:
 
 	invulnerable = true
 
-
+	# Efecto de parpadeo al recibir daño
 	var sprite: AnimatedSprite2D = $AnimatedSprite2D
 	var tiempo_parpadeo := 0.5
 	var intervalo := 0.08

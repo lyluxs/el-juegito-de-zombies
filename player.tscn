@@ -67,7 +67,6 @@ animation = &"idle"
 autoplay = "idle"
 
 [node name="Weapon" parent="." unique_id=1109859132 instance=ExtResource("3_i3pqv")]
-position = Vector2(10, 1)
 bullet_scene = ExtResource("11_nvl01")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=837559898]

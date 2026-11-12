@@ -108,7 +108,8 @@ radius = 39.051247
 [sub_resource type="CircleShape2D" id="CircleShape2D_roy8y"]
 radius = 8.062258
 
-[node name="Zombie" type="CharacterBody2D" unique_id=467401612]
+[node name="Zombie" type="CharacterBody2D" unique_id=467401612 groups=["zombies"]]
+position = Vector2(79, 13)
 script = ExtResource("1_roy8y")
 
 [node name="Sombra" type="Sprite2D" parent="." unique_id=1486838747]

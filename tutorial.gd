@@ -25,7 +25,7 @@ func _ready() -> void:
 	mensaje.hide()
 
 	var zombie = get_tree().current_scene.find_child(
-		"PrimerZombie", true, false
+		"Zombie", true, false
 	)
 
 	if zombie:
