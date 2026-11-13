@@ -28,7 +28,6 @@ var selected_option = 0
 
 var selection_tween: Tween
 var logo_tween: Tween
-var background_tween: Tween
 
 
 # ♡ Initialize menu
@@ -106,7 +105,7 @@ func animate_logo():
 
 func animate_background():
 
-	background.scale = Vector2(1.15, 1.15)
+	background.scale = Vector2(1.08, 1.08)
 	background.modulate.a = 0.0
 
 	var intro = create_tween()
@@ -119,20 +118,6 @@ func animate_background():
 	intro.tween_property(
 		background, "modulate:a", 1.0, 1.2
 	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
-
-	await intro.finished
-
-	# Continuous zoom effect
-	background_tween = create_tween()
-	background_tween.set_loops()
-
-	background_tween.tween_property(
-		background, "scale", Vector2(1.04, 1.04), 3.0
-	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
-
-	background_tween.tween_property(
-		background, "scale", Vector2.ONE, 3.0
-	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
 
 
 # ✧ Handle menu input
