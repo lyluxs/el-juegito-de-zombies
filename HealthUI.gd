@@ -1,11 +1,18 @@
 
 extends CanvasLayer
 
+# ♡ ───── PLAYER SETTINGS ───── ♡
+
 @export var player: Node2D
 
+# ♡ ───── HEART TEXTURES ───── ♡
+
+@export_group("Heart Textures")
 @export var full_heart: Texture2D
 @export var half_heart: Texture2D
 @export var empty_heart: Texture2D
+
+# ♡ ───── HEART NODES ───── ♡
 
 @onready var hearts: Array[TextureRect] = [
 	$HBoxContainer/Heart1,
@@ -14,7 +21,9 @@ extends CanvasLayer
 ]
 
 
-func _ready():
+# ♡ ───── INITIAL SETUP ───── ♡
+
+func _ready() -> void:
 	if player:
 		player.health_changed.connect(update_health)
 		update_health(player.current_health)
@@ -22,7 +31,9 @@ func _ready():
 		push_warning("Player no esta asignado w")
 
 
-func update_health(health: int):
+# ♡ ───── UPDATE HEALTH BAR ───── ♡
+
+func update_health(health: int) -> void:
 	for i in range(hearts.size()):
 		var heart_health = health - (i * 2)
 

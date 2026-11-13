@@ -1,20 +1,31 @@
 
 extends StaticBody2D
 
+# ♡ ───── DONUT STATUS ───── ♡
+
 var player_nearby: bool = false
 var collected: bool = false
 
+# ♡ ───── DONUT SETTINGS ───── ♡
+
+@export_group("Donut Stats")
 @export var health_amount: int = 1
+
+# ♡ ───── NODES ───── ♡
 
 @onready var sprite: Sprite2D = $Sprite2D
 @onready var collision: CollisionShape2D = $CollisionShape2D
 @onready var area_collision: CollisionShape2D = $Area2D/CollisionShape2D
 
 
+# ♡ ───── PLAYER INTERACTION ───── ♡
+
 func _process(_delta: float) -> void:
 	if player_nearby and Input.is_action_just_pressed("interactuar"):
 		collect_donut()
 
+
+# ♡ ───── COLLECT DONUT ───── ♡
 
 func collect_donut() -> void:
 	if collected:
@@ -44,6 +55,8 @@ func collect_donut() -> void:
 
 	queue_free()
 
+
+# ♡ ───── PLAYER DETECTION ───── ♡
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == "Player":

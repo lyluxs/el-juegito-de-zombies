@@ -1,59 +1,84 @@
+
 extends Node2D
 
-@export var textura_normal: Texture2D
-@export var textura_roja: Texture2D
+# ♡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━♡
+#             CURSOR SYSTEM
+# ♡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━♡
+
+# ─────────── CURSOR TEXTURES ───────────
+
+@export_group("Cursor Textures")
+@export var normal_texture: Texture2D
+@export var red_texture: Texture2D
+
+# ─────────── NODES ───────────
 
 @onready var sprite: Sprite2D = $Sprite2D
 
-var apuntando_a_zombie: bool = false
+# ─────────── CURSOR STATUS ───────────
 
+var aiming_at_zombie: bool = false
+
+
+# ─────────── INITIALIZATION ───────────
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
-	sprite.texture = textura_normal
+	sprite.texture = normal_texture
 
+
+# ─────────── CURSOR MOVEMENT ───────────
 
 func _process(_delta: float) -> void:
 	global_position = get_global_mouse_position()
 
-	var nuevo_estado := cursor_sobre_zombie()
+	var new_state := is_cursor_over_zombie()
 
-	if nuevo_estado != apuntando_a_zombie:
-		apuntando_a_zombie = nuevo_estado
+	if new_state != aiming_at_zombie:
+		aiming_at_zombie = new_state
 
-		if apuntando_a_zombie:
-			sprite.texture = textura_roja
+		if aiming_at_zombie:
+			sprite.texture = red_texture
 		else:
-			sprite.texture = textura_normal
+			sprite.texture = normal_texture
 
 
-func cursor_sobre_zombie() -> bool:
-	var espacio := get_world_2d().direct_space_state
+# ─────────── ZOMBIE DETECTION ───────────
 
-	var consulta := PhysicsPointQueryParameters2D.new()
-	consulta.position = get_global_mouse_position()
-	consulta.collide_with_areas = true
-	consulta.collide_with_bodies = true
+func is_cursor_over_zombie() -> bool:
+	var space = get_world_2d().direct_space_state
 
-	var resultados := espacio.intersect_point(consulta, 32)
+	var query = PhysicsPointQueryParameters2D.new()
+	query.position = get_global_mouse_position()
+	query.collide_with_areas = true
+	query.collide_with_bodies = true
 
-	for resultado in resultados:
-		var objeto = resultado.collider
+	var results = space.intersect_point(query, 32)
 
-		if objeto is Node and objeto.is_in_group("zombies"):
+	for result in results:
+		var object = result.collider
+
+		if object is Node and object.is_in_group("zombies"):
 			return true
 
-		if objeto is Node:
-			var padre = objeto.get_parent()
+		if object is Node:
+			var parent = object.get_parent()
 
-			while padre != null:
-				if padre.is_in_group("zombie"):
+			while parent != null:
+				if parent.is_in_group("zombies"):
 					return true
 
-				padre = padre.get_parent()
+				parent = parent.get_parent()
 
 	return false
 
 
+# ─────────── CLEANUP ───────────
+
 func _exit_tree() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+
+
+# ♡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━♡
+#              END OF FILE
+# ♡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━♡

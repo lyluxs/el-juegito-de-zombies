@@ -1,24 +1,31 @@
 
 extends Node2D
 
+# ♡ ───── LEVEL SETUP ───── ♡
 
-func _ready():
-	var mapa = $Map
+func _ready() -> void:
+	var map = $Map
+	var messages = $Mensajes
 
-	mapa.get_node("Puerta").zona = $Zona1
-	mapa.get_node("Puerta2").zona = $Zona3
-	mapa.get_node("Puerta3").zona = $Zona4
-	mapa.get_node("Puerta6").zona = $Zona6
+	# ♡ Door connections
 
-	mapa.get_node("Puerta7").zona = $Zona6
-	mapa.get_node("Puerta8").zona = $Zona6
-	mapa.get_node("Puerta9").zona = $Zona6
-	mapa.get_node("Puerta10").zona = $Zona6
-	mapa.get_node("Puerta11").zona = $Zona6
-	mapa.get_node("Puerta12").zona = $Zona6
-	mapa.get_node("Puerta13").zona = $Zona7
-	var mensajes = $Mensajes
+	map.get_node("Puerta").zona = $Zona1
+	map.get_node("Puerta2").zona = $Zona3
+	map.get_node("Puerta3").zona = $Zona4
+	map.get_node("Puerta6").zona = $Zona6
 
-	for puerta in $Map.find_children("*", "StaticBody2D", true, false):
-		if puerta.has_method("abrir_puerta"):
-			puerta.mensajes = mensajes
+	map.get_node("Puerta7").zona = $Zona6
+	map.get_node("Puerta8").zona = $Zona6
+	map.get_node("Puerta9").zona = $Zona6
+	map.get_node("Puerta10").zona = $Zona6
+	map.get_node("Puerta11").zona = $Zona6
+	map.get_node("Puerta12").zona = $Zona6
+	map.get_node("Puerta13").zona = $Zona7
+
+	# ♡ Assign messages to every door
+
+	for door in map.find_children("*", "StaticBody2D", true, false):
+		if door.has_method("open_door"):
+			door.mensajes = messages
+
+	print("♡ LEVEL DOORS CONFIGURED")

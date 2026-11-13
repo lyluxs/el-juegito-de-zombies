@@ -3,27 +3,41 @@ extends CharacterBody2D
 
 signal health_changed(health: int)
 
-@export var speed := 80.0
+# ♡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━♡
+#             PLAYER SYSTEM
+# ♡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━♡
 
-var max_health: int = 6
+@export_group("Statistics")
+@export var speed: float = 80.0
+@export var max_health: int = 6
+
 var current_health: int = 6
 
+# ♡ States
 var invulnerable: bool = false
 var dead: bool = false
 var message_active: bool = false
 
+@onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
+
+
+# ─────────── INITIALIZATION ───────────
 
 func _ready() -> void:
 	add_to_group("player")
+	current_health = max_health
 	health_changed.emit(current_health)
 
 
+# ─────────── MOVEMENT ───────────
+
 func _physics_process(_delta: float) -> void:
+
 	if dead:
 		velocity = Vector2.ZERO
 		return
 
-	# Movement
+	# ♡ Movement
 	var direction = Input.get_vector(
 		"move_left",
 		"move_right",
@@ -31,38 +45,42 @@ func _physics_process(_delta: float) -> void:
 		"move_down"
 	)
 
-	# Mouse orientation
+	# ♡ Mouse orientation
 	var mouse_direction = get_global_mouse_position() - global_position
 
 	if mouse_direction.x > 0:
-		$AnimatedSprite2D.flip_h = false
+		animated_sprite.flip_h = false
 	elif mouse_direction.x < 0:
-		$AnimatedSprite2D.flip_h = true
+		animated_sprite.flip_h = true
 
-	# Animations
+	# ♡ Animations
 	if direction != Vector2.ZERO:
-		$AnimatedSprite2D.play("walk")
+		animated_sprite.play("walk")
 	else:
-		$AnimatedSprite2D.play("idle")
+		animated_sprite.play("idle")
 
-	# Movement
+	# ♡ Movement
 	velocity = direction * speed
 	move_and_slide()
 
 
-func receive_damage() -> void:
+# ─────────── DAMAGE ───────────
+
+func receive_damage(amount: int = 1) -> void:
+
 	if invulnerable or dead:
 		return
 
-	current_health = max(current_health - 1, 0)
+	current_health = max(current_health - amount, 0)
 	health_changed.emit(current_health)
 
-	print("Player health: ", current_health)
+	print("♡ PLAYER HEALTH: ", current_health)
 
 	if current_health <= 0:
 		dead = true
 		velocity = Vector2.ZERO
-		print("GAME OVER")
+
+		print("♡ GAME OVER")
 
 		get_tree().call_deferred(
 			"change_scene_to_file",
@@ -72,28 +90,38 @@ func receive_damage() -> void:
 
 	invulnerable = true
 
-	# Damage blink effect
-	var sprite: AnimatedSprite2D = $AnimatedSprite2D
+	# ♡ Damage blink effect
 	var blink_duration := 0.5
 	var interval := 0.08
 	var elapsed := 0.0
 
 	while elapsed < blink_duration:
-		sprite.modulate = Color.WHITE
+
+		animated_sprite.modulate = Color.WHITE
 		await get_tree().create_timer(interval).timeout
 
-		sprite.modulate = Color(1.0, 0.35, 0.35)
+		animated_sprite.modulate = Color(1.0, 0.35, 0.35)
 		await get_tree().create_timer(interval).timeout
+
+		if not is_inside_tree():
+			return
 
 		elapsed += interval * 2
 
-	sprite.modulate = Color.WHITE
+	animated_sprite.modulate = Color.WHITE
 
 	await get_tree().create_timer(0.8 - blink_duration).timeout
+
+	if not is_inside_tree():
+		return
+
 	invulnerable = false
 
 
+# ─────────── HEALTH RESTORATION ───────────
+
 func restore_health(amount: int = 1) -> bool:
+
 	if dead:
 		return false
 
@@ -104,12 +132,15 @@ func restore_health(amount: int = 1) -> bool:
 	current_health = min(current_health + amount, max_health)
 	health_changed.emit(current_health)
 
-	print("Health restored: ", current_health)
+	print("♡ HEALTH RESTORED: ", current_health)
 
 	return true
 
 
+# ─────────── HEALTH MESSAGE ───────────
+
 func show_health_message() -> void:
+
 	if message_active:
 		return
 
@@ -129,9 +160,8 @@ func show_health_message() -> void:
 	message.scale = Vector2(0.7, 0.7)
 	message.modulate.a = 0.0
 
-	# Entrance animation
+	# ♡ Entrance animation
 	var tween = create_tween()
-
 	tween.set_parallel(true)
 
 	tween.tween_property(
@@ -150,12 +180,14 @@ func show_health_message() -> void:
 
 	await tween.finished
 
-	# Wait
+	# ♡ Waiting
 	await get_tree().create_timer(1.5).timeout
 
-	# Exit animation
-	var exit_tween = create_tween()
+	if not is_inside_tree():
+		return
 
+	# ♡ Exit animation
+	var exit_tween = create_tween()
 	exit_tween.set_parallel(true)
 
 	exit_tween.tween_property(
@@ -180,3 +212,8 @@ func show_health_message() -> void:
 		message.modulate.a = 1.0
 
 	message_active = false
+
+
+# ♡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━♡
+#             END OF FILE
+# ♡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━♡

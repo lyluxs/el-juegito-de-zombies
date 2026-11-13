@@ -1,33 +1,43 @@
 
 extends Node2D
 
+# ♡ ───── WEAPON SETTINGS ───── ♡
+
+@export_group("Weapon Stats")
 @export var bullet_scene: PackedScene
 @export var fire_rate: float = 0.2
+
+# ♡ ───── NODES ───── ♡
 
 @onready var sprite: Sprite2D = $Sprite2D
 @onready var bullet_spawn: Node2D = $BulletSpawn
 
+# ♡ ───── WEAPON STATUS ───── ♡
+
 var can_shoot: bool = true
 
 
+# ♡ ───── AIM & SHOOTING ───── ♡
+
 func _process(_delta: float) -> void:
+	var mouse_position = get_global_mouse_position()
+	var direction = mouse_position - global_position
 
-	var mouse_pos = get_global_mouse_position()
-	var direction = mouse_pos - global_position
-
-	# Apuntado de 360 grados
+	# ♡ 360-degree aiming
 	rotation = direction.angle()
 
-	# Evitar que el arma quede invertida
+	# ♡ Prevent the weapon from flipping upside down
 	sprite.flip_v = direction.x < 0
 
-	# Mantener el arma delante del jugador
+	# ♡ Keep the weapon in front of the player
 	z_index = 1
 
-	# Disparar
+	# ♡ Shoot when the input is pressed
 	if Input.is_action_just_pressed("shoot") and can_shoot:
 		shoot()
 
+
+# ♡ ───── BULLET CREATION ───── ♡
 
 func shoot() -> void:
 	if bullet_scene == null:

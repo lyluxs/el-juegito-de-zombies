@@ -177,6 +177,18 @@ size = Vector2(6, 7)
 radius = 25.999832
 height = 95.999374
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1dqi4"]
+size = Vector2(14, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l4bod"]
+size = Vector2(45, 42)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qd006"]
+size = Vector2(15.75, 14.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_43bah"]
+size = Vector2(14.1875, 22)
+
 [node name="Map" type="Node2D" unique_id=1224895729]
 
 [node name="TileMapLayer Piso" type="TileMapLayer" parent="." unique_id=487750417]
@@ -474,13 +486,13 @@ position = Vector2(-134.25568, -82.948235)
 position = Vector2(134, 82.5)
 shape = SubResource("RectangleShape2D_ivps1")
 
-[node name="sangre3" type="Node" parent="." unique_id=1318478866]
+[node name="sangre3" type="Node2D" parent="." unique_id=68586788]
 
 [node name="Sprite2D" type="Sprite2D" parent="sangre3" unique_id=846852735]
 position = Vector2(-158, -74)
 texture = ExtResource("11_ooc2g")
 
-[node name="sangre4" type="Node" parent="." unique_id=1253525857]
+[node name="sangre4" type="Node2D" parent="." unique_id=188977008]
 
 [node name="Sprite2D" type="Sprite2D" parent="sangre4" unique_id=1847594779]
 position = Vector2(-146, -109)
@@ -754,6 +766,9 @@ texture = ExtResource("20_7vxqa")
 position = Vector2(267, 27)
 texture = ExtResource("21_qw8h8")
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sofa(grande)(lado)" unique_id=601222054]
+shape = SubResource("RectangleShape2D_1dqi4")
+
 [node name="Sofa(chico)" type="Sprite2D" parent="." unique_id=886726808]
 position = Vector2(288, 4)
 texture = ExtResource("22_meq34")
@@ -798,6 +813,60 @@ texture = ExtResource("28_vbtoe")
 [node name="Mesa4" type="Sprite2D" parent="." unique_id=780483078]
 position = Vector2(339.5, -174)
 texture = ExtResource("6_iw27f")
+
+[node name="Colisiones (Esto es temporal)" type="StaticBody2D" parent="." unique_id=844932400]
+position = Vector2(339.5, -174)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Colisiones (Esto es temporal)" unique_id=969151744]
+position = Vector2(-64.5, -3)
+shape = SubResource("RectangleShape2D_l4bod")
+debug_color = Color(0.7643231, 0.41410276, 0.47466838, 0.41960785)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Colisiones (Esto es temporal)" unique_id=2143678926]
+position = Vector2(0.5, -3)
+shape = SubResource("RectangleShape2D_l4bod")
+debug_color = Color(0.7643231, 0.41410276, 0.47466838, 0.41960785)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Colisiones (Esto es temporal)" unique_id=1846256840]
+position = Vector2(66.5, -3)
+shape = SubResource("RectangleShape2D_l4bod")
+debug_color = Color(0.7643231, 0.41410276, 0.47466838, 0.41960785)
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Colisiones (Esto es temporal)" unique_id=1072322522]
+position = Vector2(126.5, -2)
+shape = SubResource("RectangleShape2D_l4bod")
+debug_color = Color(0.7643231, 0.41410276, 0.47466838, 0.41960785)
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Colisiones (Esto es temporal)" unique_id=586888848]
+position = Vector2(192.5, -2)
+shape = SubResource("RectangleShape2D_l4bod")
+debug_color = Color(0.7643231, 0.41410276, 0.47466838, 0.41960785)
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Colisiones (Esto es temporal)" unique_id=971004295]
+position = Vector2(-67.5, 129)
+shape = SubResource("RectangleShape2D_l4bod")
+debug_color = Color(0.7643231, 0.41410276, 0.47466838, 0.41960785)
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Colisiones (Esto es temporal)" unique_id=2017302951]
+position = Vector2(-0.5, 128)
+shape = SubResource("RectangleShape2D_l4bod")
+debug_color = Color(0.7643231, 0.41410276, 0.47466838, 0.41960785)
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Colisiones (Esto es temporal)" unique_id=1836311873]
+position = Vector2(-51.625, 178.125)
+shape = SubResource("RectangleShape2D_qd006")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Colisiones (Esto es temporal)" unique_id=1085919513]
+position = Vector2(-51.5, 220)
+shape = SubResource("RectangleShape2D_qd006")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Colisiones (Esto es temporal)" unique_id=1566708021]
+position = Vector2(-27.5, 198)
+shape = SubResource("RectangleShape2D_43bah")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Colisiones (Esto es temporal)" unique_id=1847490225]
+position = Vector2(-27.5, 174)
+shape = SubResource("RectangleShape2D_43bah")
 
 [node name="Silla(trasera)2" type="Sprite2D" parent="." unique_id=1779971547]
 position = Vector2(339.5, -164)

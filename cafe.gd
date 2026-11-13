@@ -1,47 +1,82 @@
 
 extends StaticBody2D
 
-var jugador_cerca: bool = false
-var recogido: bool = false
+# ♡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━♡
+#           COFFEE POWER-UP
+# ♡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━♡
 
-@export var aumento_velocidad: float = 90.0
-@export var duracion: float = 5.0
+# ♡ States
+var player_nearby: bool = false
+var collected: bool = false
 
+@export_group("Coffee Stats")
+@export var speed_boost: float = 90.0
+@export var duration: float = 5.0
+
+# ♡ Nodes
 @onready var sprite: Sprite2D = $Sprite2D
-@onready var colision: CollisionShape2D = $CollisionShape2D
-@onready var area_colision: CollisionShape2D = $Area2D/CollisionShape2D
+@onready var collision: CollisionShape2D = $CollisionShape2D
+@onready var area_collision: CollisionShape2D = $Area2D/CollisionShape2D
 
+
+# ─────────── INPUT ───────────
 
 func _process(_delta: float) -> void:
-	if jugador_cerca and Input.is_action_just_pressed("interactuar"):
-		recoger_cafe()
+
+	if player_nearby and Input.is_action_just_pressed("interactuar"):
+		collect_coffee()
 
 
-func recoger_cafe() -> void:
-	if recogido:
+# ─────────── COLLECTION ───────────
+
+func collect_coffee() -> void:
+
+	if collected:
 		return
 
-	var jugador = get_node_or_null("../Player")
-	if jugador == null:
-		print("No se encontró Player en ../Player")
+	var player = get_node_or_null("../Player")
+
+	if player == null:
+		print("♡ ERROR: Player not found in ../Player")
 		return
-	recogido = true
-	jugador.speed += aumento_velocidad
+
+	collected = true
+
+	print("♡ COFFEE COLLECTED!")
+
+	# ♡ Speed boost
+	player.speed += speed_boost
+
 	sprite.hide()
-	colision.set_deferred("disabled", true)
-	area_colision.set_deferred("disabled", true)
-	await get_tree().create_timer(duracion).timeout
 
-	if is_instance_valid(jugador):
-		jugador.speed -= aumento_velocidad
+	collision.set_deferred("disabled", true)
+	area_collision.set_deferred("disabled", true)
+
+	# ♡ Power-up duration
+	await get_tree().create_timer(duration).timeout
+
+	if is_instance_valid(player):
+		player.speed -= speed_boost
+
+	print("♡ COFFEE EFFECT ENDED")
+
 	queue_free()
 
 
+# ─────────── DETECTION ───────────
+
 func _on_area_2d_body_entered(body: Node2D) -> void:
+
 	if body.name == "Player":
-		jugador_cerca = true
+		player_nearby = true
 
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
+
 	if body.name == "Player":
-		jugador_cerca = false
+		player_nearby = false
+
+
+# ♡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━♡
+#             END OF FILE
+# ♡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━♡

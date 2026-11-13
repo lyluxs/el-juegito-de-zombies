@@ -1,111 +1,133 @@
+
 extends CanvasLayer
 
-@onready var mensaje: Label = $Mensaje
+# ♡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━♡
+#             TUTORIAL SYSTEM
+# ♡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━♡
 
-var paso: int = 0
-var animacion: Tween
-var posicion_original: Vector2
+@onready var message: Label = $Mensaje
+
+var step: int = 0
+var animation: Tween
+var original_position: Vector2
+
+
+# ─────────── INITIALIZATION ───────────
 
 func _ready() -> void:
 	add_to_group("tutorial")
 
-	mensaje.position = Vector2.ZERO
-	mensaje.size = Vector2(230, mensaje.size.y)
-	mensaje.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	mensaje.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	message.position = Vector2.ZERO
+	message.size = Vector2(230, message.size.y)
+	message.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	message.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 
-	posicion_original = Vector2(
-		(240.0 - mensaje.size.x) / 2.0,
-		160.0 - mensaje.size.y - 5.0
+	original_position = Vector2(
+		(240.0 - message.size.x) / 2.0,
+		160.0 - message.size.y - 5.0
 	)
 
-	mensaje.position = posicion_original
-	mensaje.pivot_offset = mensaje.size / 2.0
-	mensaje.text = "Dispara al zombie con clic izquierdo"
-	mensaje.hide()
+	message.position = original_position
+	message.pivot_offset = message.size / 2.0
+	message.text = "Dispara al zombie con clic izquierdo"
+	message.hide()
 
+	# ♡ Connect first zombie
 	var zombie = get_tree().current_scene.find_child(
 		"Zombie", true, false
 	)
 
 	if zombie:
-		if zombie.has_signal("zombie_muerto"):
-			zombie.zombie_muerto.connect(primer_zombi_muerto)
+		if zombie.has_signal("zombie_dead"):
+			zombie.zombie_dead.connect(first_zombie_killed)
 		else:
-			push_warning("PrimerZombie no tiene la señal zombie_muerto.")
+			push_warning("PrimerZombie no tiene la señal zombie_dead.")
 	else:
-		push_warning("No se encontró PrimerZombie en la escena.")
+		push_warning("No se encontró Zombie en la escena.")
 
-	mostrar_mensaje()
+	show_message()
 
 
-func mostrar_mensaje() -> void:
-	if animacion and animacion.is_running():
-		animacion.kill()
+# ─────────── SHOW MESSAGE ───────────
 
-	mensaje.position = posicion_original + Vector2(0, 10)
-	mensaje.scale = Vector2(0.8, 0.8)
-	mensaje.modulate.a = 0.0
-	mensaje.show()
+func show_message() -> void:
+	if animation and animation.is_running():
+		animation.kill()
 
-	animacion = create_tween()
-	animacion.set_parallel(true)
+	message.position = original_position + Vector2(0, 10)
+	message.scale = Vector2(0.8, 0.8)
+	message.modulate.a = 0.0
+	message.show()
 
-	animacion.tween_property(
-		mensaje, "position", posicion_original, 0.35
+	animation = create_tween()
+	animation.set_parallel(true)
+
+	animation.tween_property(
+		message, "position", original_position, 0.35
 	).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
 
-	animacion.tween_property(
-		mensaje, "scale", Vector2.ONE, 0.35
+	animation.tween_property(
+		message, "scale", Vector2.ONE, 0.35
 	).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
 
-	animacion.tween_property(
-		mensaje, "modulate:a", 1.0, 0.25
+	animation.tween_property(
+		message, "modulate:a", 1.0, 0.25
 	)
 
 
-func ocultar_mensaje() -> void:
-	if animacion and animacion.is_running():
-		animacion.kill()
+# ─────────── HIDE MESSAGE ───────────
 
-	animacion = create_tween()
-	animacion.set_parallel(true)
+func hide_message() -> void:
+	if animation and animation.is_running():
+		animation.kill()
 
-	animacion.tween_property(
-		mensaje, "scale", Vector2(0.85, 0.85), 0.2
+	animation = create_tween()
+	animation.set_parallel(true)
+
+	animation.tween_property(
+		message, "scale", Vector2(0.85, 0.85), 0.2
 	)
 
-	animacion.tween_property(
-		mensaje, "modulate:a", 0.0, 0.2
+	animation.tween_property(
+		message, "modulate:a", 0.0, 0.2
 	)
 
-	animacion.chain().tween_callback(mensaje.hide)
+	animation.chain().tween_callback(message.hide)
 
 
-func primer_zombi_muerto() -> void:
-	if paso != 0:
+# ─────────── FIRST ZOMBIE DEFEATED ───────────
+
+func first_zombie_killed() -> void:
+	if step != 0:
 		return
 
-	paso = 1
+	step = 1
 
-	ocultar_mensaje()
-	await animacion.finished
+	hide_message()
+	await animation.finished
 
-	if paso != 1:
+	if step != 1:
 		return
 
-	mensaje.text = "Interactua con E para abrir la puerta"
-	mostrar_mensaje()
+	message.text = "Interactua con E para abrir la puerta"
+	show_message()
 
 	await get_tree().create_timer(4.0).timeout
 
-	if paso == 1:
-		terminar_tutorial()
+	if step == 1:
+		finish_tutorial()
 
 
-func terminar_tutorial() -> void:
-	if paso >= 2:
+# ─────────── FINISH TUTORIAL ───────────
+
+func finish_tutorial() -> void:
+	if step >= 2:
 		return
 
-	paso = 2
-	ocultar_mensaje()
+	step = 2
+	hide_message()
+
+
+# ♡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━♡
+#              END OF FILE
+# ♡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━♡

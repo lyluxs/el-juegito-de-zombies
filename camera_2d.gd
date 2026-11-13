@@ -1,7 +1,13 @@
+
 extends Camera2D
 
-@export var jugador: Node2D
+# ♡ ───── CAMERA SETTINGS ───── ♡
 
-func _process(_delta):
-	if jugador:
-		global_position = jugador.global_position
+@export var player: Node2D
+
+
+# ♡ ───── FOLLOW PLAYER ───── ♡
+
+func _process(_delta: float) -> void:
+	if player:
+		global_position = player.global_position

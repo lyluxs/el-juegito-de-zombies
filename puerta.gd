@@ -1,42 +1,51 @@
 
 extends StaticBody2D
 
-var jugador_cerca: bool = false
-var abierta: bool = false
-var abriendo: bool = false
+# ♡ ───── DOOR STATUS ───── ♡
+
+var player_nearby: bool = false
+var is_open: bool = false
+var is_opening: bool = false
 
 var zona: Node2D = null
-var desbloqueada: bool = false
+var unlocked: bool = false
 
-#miau
 var mensajes: CanvasLayer = null
 
-@onready var animacion: AnimatedSprite2D = $AnimatedSprite2D
-@onready var colision: CollisionShape2D = $CollisionShape2D
+# ♡ ───── NODES ───── ♡
+
+@onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
+@onready var collision: CollisionShape2D = $CollisionShape2D
 
 
-func _ready():
-	animacion.play("closed")
+# ♡ ───── INITIAL SETUP ───── ♡
+
+func _ready() -> void:
+	animated_sprite.play("closed")
 
 
-func _process(_delta):
-	comprobar_zombies()
+# ♡ ───── DOOR INTERACTION ───── ♡
 
-	if jugador_cerca and Input.is_action_just_pressed("interactuar"):
-		if not desbloqueada:
+func _process(_delta: float) -> void:
+	check_zombies()
+
+	if player_nearby and Input.is_action_just_pressed("interactuar"):
+		if not unlocked:
 			if mensajes:
-				mensajes.mostrar_mensaje(
+				mensajes.show_message(
 					"NUH HUH! MATA A TODOS LOS ZOMBIES PRIMERO"
 				)
 			else:
 				print("¡Todavía quedan zombies en esta zona!")
 			return
 
-		abrir_puerta()
+		open_door()
 
 
-func comprobar_zombies():
-	if desbloqueada or zona == null:
+# ♡ ───── ZOMBIE CHECK ───── ♡
+
+func check_zombies() -> void:
+	if unlocked or zona == null:
 		return
 
 	var zombies = zona.find_children(
@@ -47,31 +56,35 @@ func comprobar_zombies():
 		if zombie.is_in_group("zombies"):
 			return
 
-	desbloqueada = true
-	print("¡Puerta desbloqueada!")
+	unlocked = true
+	print("♡ DOOR UNLOCKED: ", name)
 
 
-func abrir_puerta():
-	if abierta or abriendo:
+# ♡ ───── OPEN ANIMATION ───── ♡
+
+func open_door() -> void:
+	if is_open or is_opening:
 		return
 
-	abriendo = true
+	is_opening = true
 
-	animacion.play("open")
-	await animacion.animation_finished
+	animated_sprite.play("open")
+	await animated_sprite.animation_finished
 
-	animacion.play("opened")
-	colision.set_deferred("disabled", true)
+	animated_sprite.play("opened")
+	collision.set_deferred("disabled", true)
 
-	abierta = true
-	abriendo = false
+	is_open = true
+	is_opening = false
 
 
-func _on_interaction_area_body_entered(body):
+# ♡ ───── PLAYER DETECTION ───── ♡
+
+func _on_interaction_area_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
-		jugador_cerca = true
+		player_nearby = true
 
 
-func _on_interaction_area_body_exited(body):
+func _on_interaction_area_body_exited(body: Node2D) -> void:
 	if body.is_in_group("player"):
-		jugador_cerca = false
+		player_nearby = false

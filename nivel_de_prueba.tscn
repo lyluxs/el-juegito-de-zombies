@@ -240,6 +240,222 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_a761b"]
+resource_local_to_scene = true
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ntk2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qyufw")
+}],
+"loop": 0,
+"name": &"Damage",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jdfin")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w811k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kluo5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_alv88")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t7vrf")
+}],
+"loop": 0,
+"name": &"Death",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rv685")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_34ous")
+}],
+"loop": 1,
+"name": &"Walk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ao8eq")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8dyap"]
+resource_local_to_scene = true
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ntk2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qyufw")
+}],
+"loop": 0,
+"name": &"Damage",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jdfin")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w811k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kluo5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_alv88")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t7vrf")
+}],
+"loop": 0,
+"name": &"Death",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rv685")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_34ous")
+}],
+"loop": 1,
+"name": &"Walk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ao8eq")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_86jck"]
+resource_local_to_scene = true
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ntk2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qyufw")
+}],
+"loop": 0,
+"name": &"Damage",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jdfin")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w811k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kluo5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_alv88")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t7vrf")
+}],
+"loop": 0,
+"name": &"Death",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rv685")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_34ous")
+}],
+"loop": 1,
+"name": &"Walk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ao8eq")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gtr1s"]
+resource_local_to_scene = true
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ntk2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qyufw")
+}],
+"loop": 0,
+"name": &"Damage",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jdfin")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w811k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kluo5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_alv88")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t7vrf")
+}],
+"loop": 0,
+"name": &"Death",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rv685")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_34ous")
+}],
+"loop": 1,
+"name": &"Walk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ao8eq")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tfucu"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_tfucu"]
@@ -258,10 +474,10 @@ script = ExtResource("1_gdnvi")
 
 [node name="UI" type="Node2D" parent="." unique_id=1083550933]
 
-[node name="Camera2D" type="Camera2D" parent="UI" unique_id=807782915 node_paths=PackedStringArray("jugador")]
+[node name="Camera2D" type="Camera2D" parent="UI" unique_id=807782915 node_paths=PackedStringArray("player")]
 position = Vector2(39, 86)
 script = ExtResource("2_0q6hu")
-jugador = NodePath("../../Player")
+player = NodePath("../../Player")
 
 [node name="Sistema de vidas grafico" parent="UI/Camera2D" unique_id=2002290705 node_paths=PackedStringArray("player") instance=ExtResource("7_i454i")]
 player = NodePath("../../../Player")
@@ -288,7 +504,7 @@ text = "0"
 label_settings = SubResource("LabelSettings_47mtk")
 
 [node name="Player" parent="." unique_id=88376537 instance=ExtResource("2_5mnk7")]
-position = Vector2(45, 81)
+position = Vector2(37, 88)
 
 [node name="Zombie" parent="." unique_id=467401612 instance=ExtResource("5_ym4tk")]
 position = Vector2(101, 37)
@@ -346,9 +562,6 @@ position = Vector2(211, 59)
 
 [node name="Zombie" parent="Zona2" unique_id=797260216 instance=ExtResource("5_ym4tk")]
 position = Vector2(211, 99)
-velocidad = 50.0
-vida = 4
-tipo_skin = 1
 skins = Array[SpriteFrames]([null, SubResource("SpriteFrames_r4tps"), null, null, null, null, null])
 
 [node name="Zona3" type="Node2D" parent="." unique_id=1828645731]
@@ -356,26 +569,47 @@ position = Vector2(-18, -5)
 
 [node name="Zombie" parent="Zona3" unique_id=1780253565 instance=ExtResource("5_ym4tk")]
 position = Vector2(387, 99)
-velocidad = 50.0
-tiempo_entre_ataques = 1.0
-tipo_skin = 1
 skins = Array[SpriteFrames]([null, SubResource("SpriteFrames_28swu"), null, null, null, null, null])
 
 [node name="Zona4" type="Node2D" parent="." unique_id=1952825991]
 
 [node name="Zombie2" parent="Zona4" unique_id=890656657 instance=ExtResource("5_ym4tk")]
 position = Vector2(502, 33)
-velocidad = 50.0
-tiempo_entre_ataques = 1.0
-tipo_skin = 1
 skins = Array[SpriteFrames]([null, SubResource("SpriteFrames_emciw"), null, null, null, null, null])
+
+[node name="Zombie3" parent="Zona4" unique_id=2003475459 instance=ExtResource("5_ym4tk")]
+position = Vector2(576, 17)
+skins = Array[SpriteFrames]([null, SubResource("SpriteFrames_a761b"), null, null, null, null, null])
+
+[node name="Zombie4" parent="Zona4" unique_id=180547876 instance=ExtResource("5_ym4tk")]
+position = Vector2(482, 20)
+skins = Array[SpriteFrames]([null, SubResource("SpriteFrames_8dyap"), null, null, null, null, null])
+
+[node name="Zombie5" parent="Zona4" unique_id=2107128048 instance=ExtResource("5_ym4tk")]
+position = Vector2(534, 48)
+skins = Array[SpriteFrames]([null, SubResource("SpriteFrames_86jck"), null, null, null, null, null])
+
+[node name="Zombie6" parent="Zona4" unique_id=1187992306 instance=ExtResource("5_ym4tk")]
+position = Vector2(502, 70)
+skins = Array[SpriteFrames]([null, SubResource("SpriteFrames_gtr1s"), null, null, null, null, null])
 
 [node name="Zombie" parent="Zona4" unique_id=85013222 instance=ExtResource("5_ym4tk")]
 position = Vector2(431, 33)
-vida = 5
 skins = Array[SpriteFrames]([ExtResource("13_w0py1"), null, null, null, null, null, null])
 
 [node name="Zona5" type="Node2D" parent="." unique_id=131063525]
+
+[node name="Zombie7" parent="Zona5" unique_id=1386306969 instance=ExtResource("5_ym4tk")]
+position = Vector2(471, -110)
+skins = Array[SpriteFrames]([ExtResource("13_w0py1"), null, null, null, null, null, null])
+
+[node name="Zombie8" parent="Zona5" unique_id=1866640832 instance=ExtResource("5_ym4tk")]
+position = Vector2(306, -124)
+skins = Array[SpriteFrames]([ExtResource("13_w0py1"), null, null, null, null, null, null])
+
+[node name="Zombie9" parent="Zona5" unique_id=1408020331 instance=ExtResource("5_ym4tk")]
+position = Vector2(534, -143)
+skins = Array[SpriteFrames]([ExtResource("13_w0py1"), null, null, null, null, null, null])
 
 [node name="Zona6" type="Node2D" parent="." unique_id=540829917]
 
@@ -416,8 +650,8 @@ label_settings = SubResource("LabelSettings_xfeux")
 [node name="Mira" type="Node2D" parent="." unique_id=933796046]
 position = Vector2(64, 83)
 script = ExtResource("20_ejfy6")
-textura_normal = ExtResource("21_ejfy6")
-textura_roja = ExtResource("22_7ah6t")
+normal_texture = ExtResource("21_ejfy6")
+red_texture = ExtResource("22_7ah6t")
 
 [node name="Sprite2D" type="Sprite2D" parent="Mira" unique_id=1965634061]
 scale = Vector2(0.5, 0.5)
