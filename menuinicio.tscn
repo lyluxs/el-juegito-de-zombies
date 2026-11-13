@@ -26,6 +26,7 @@ offset_left = -120.0
 offset_top = -79.0
 offset_right = 120.0
 offset_bottom = 81.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
 texture = ExtResource("2_cmdc3")
 
 [node name="MenuVertical" type="VBoxContainer" parent="." unique_id=1635399986]
@@ -33,11 +34,16 @@ anchors_preset = 14
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_right = 240.0
-offset_bottom = 160.0
+offset_left = 41.999985
+offset_top = 29.999985
+offset_right = 282.0
+offset_bottom = 187.99998
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.7, 0.7)
+size_flags_horizontal = 4
 size_flags_vertical = 4
+offset_transform_scale = Vector2(0.5, 0.5)
 theme_override_constants/separation = -1
 alignment = 1
 

@@ -1,3 +1,4 @@
+
 extends Node2D
 
 
@@ -17,6 +18,7 @@ extends Node2D
 
 # ✧ Menu nodes
 
+@onready var background = $Camera2D/Background
 @onready var logo = $MenuVertical/Logo
 @onready var play_button = $MenuVertical/Play
 @onready var exit_button = $MenuVertical/Exit
@@ -26,6 +28,7 @@ var selected_option = 0
 
 var selection_tween: Tween
 var logo_tween: Tween
+var background_tween: Tween
 
 
 # ♡ Initialize menu
@@ -36,7 +39,7 @@ func _ready():
 
 	# Center button pivots
 	for button in buttons:
-		button.pivot_offset = button.size / 2.0
+		button.pivot_offset_ratio = Vector2(0.5, 0.5)
 		button.scale = Vector2(0.8, 0.8)
 		button.modulate.a = 0.0
 
@@ -44,6 +47,7 @@ func _ready():
 	update_selection()
 	animate_buttons()
 	animate_logo()
+	animate_background()
 
 
 # ✧ Button entrance animation
@@ -55,7 +59,7 @@ func animate_buttons():
 
 	for button in buttons:
 		intro.tween_property(
-			button, "scale", Vector2.ONE, 0.3
+			button, "scale", Vector2.ONE, 0.5
 		).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
 
 		intro.tween_property(
@@ -98,6 +102,39 @@ func animate_logo():
 	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
 
 
+# ✧ Background zoom and appearance
+
+func animate_background():
+
+	background.scale = Vector2(1.15, 1.15)
+	background.modulate.a = 0.0
+
+	var intro = create_tween()
+	intro.set_parallel(true)
+
+	intro.tween_property(
+		background, "scale", Vector2.ONE, 1.2
+	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
+
+	intro.tween_property(
+		background, "modulate:a", 1.0, 1.2
+	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
+
+	await intro.finished
+
+	# Continuous zoom effect
+	background_tween = create_tween()
+	background_tween.set_loops()
+
+	background_tween.tween_property(
+		background, "scale", Vector2(1.04, 1.04), 3.0
+	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+
+	background_tween.tween_property(
+		background, "scale", Vector2.ONE, 3.0
+	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+
+
 # ✧ Handle menu input
 
 func _process(_delta):
@@ -118,7 +155,7 @@ func _process(_delta):
 
 func update_selection():
 
-	# Update button textures :p
+	# Update button textures
 	play_button.get_node("background").texture = (
 		play_active if selected_option == 0 else play_normal
 	)
@@ -134,7 +171,7 @@ func update_selection():
 	selection_tween = create_tween()
 	selection_tween.set_parallel(true)
 
-	# Centered scale animation :3
+	# Centered scale animation
 	for i in range(buttons.size()):
 
 		var button = buttons[i]
