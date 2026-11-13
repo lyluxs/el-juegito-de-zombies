@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dmom6t7gmbami"
-path="res://.godot/imported/Mira (Desmarcado).png-734d30c31dbc495974d7342ee5376363.ctex"
+path="res://.godot/imported/Mira (Desmarcado).png-21155816c62e2f1712547b2189a04feb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Interfaz/Mira (Desmarcado).png"
-dest_files=["res://.godot/imported/Mira (Desmarcado).png-734d30c31dbc495974d7342ee5376363.ctex"]
+source_file="res://Assets/Interfaz/Mira (Desmarcado).png"
+dest_files=["res://.godot/imported/Mira (Desmarcado).png-21155816c62e2f1712547b2189a04feb.ctex"]
 
 [params]
 

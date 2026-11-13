@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bvsvxceob0s28"
-path="res://.godot/imported/Botón inactivo.png-38e0688822cf06c146faff4849addd2a.ctex"
+path="res://.godot/imported/Botón inactivo.png-ad2b3a1921d55bc34a870ec6b9d12d0a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://botones/Botón inactivo.png"
-dest_files=["res://.godot/imported/Botón inactivo.png-38e0688822cf06c146faff4849addd2a.ctex"]
+source_file="res://Assets/botones/Botón inactivo.png"
+dest_files=["res://.godot/imported/Botón inactivo.png-ad2b3a1921d55bc34a870ec6b9d12d0a.ctex"]
 
 [params]
 

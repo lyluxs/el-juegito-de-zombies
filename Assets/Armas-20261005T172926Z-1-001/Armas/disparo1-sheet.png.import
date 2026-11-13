@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbp54fnl1booy"
-path="res://.godot/imported/Blood decal (Large).png-5c341cc7448feb7130a739ebdae85f31.ctex"
+uid="uid://bbkxcrq1hqh3r"
+path="res://.godot/imported/disparo1-sheet.png-afe056bce00e5425b7f9de82df97d87e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sangre/Blood decal (Large).png"
-dest_files=["res://.godot/imported/Blood decal (Large).png-5c341cc7448feb7130a739ebdae85f31.ctex"]
+source_file="res://Assets/Armas-20261005T172926Z-1-001/Armas/disparo1-sheet.png"
+dest_files=["res://.godot/imported/disparo1-sheet.png-afe056bce00e5425b7f9de82df97d87e.ctex"]
 
 [params]
 

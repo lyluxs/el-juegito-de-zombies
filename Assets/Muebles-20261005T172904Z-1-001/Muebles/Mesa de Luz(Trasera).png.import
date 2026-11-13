@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://btv680lcf2k7r"
-path="res://.godot/imported/Mesa de Luz(Trasera).png-a9cd261d8f62b0dd8bdd93b46f0fff53.ctex"
+path="res://.godot/imported/Mesa de Luz(Trasera).png-9ae59585bd1a804842eab0c572b32aaa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Muebles-20261005T172904Z-1-001/Muebles/Mesa de Luz(Trasera).png"
-dest_files=["res://.godot/imported/Mesa de Luz(Trasera).png-a9cd261d8f62b0dd8bdd93b46f0fff53.ctex"]
+source_file="res://Assets/Muebles-20261005T172904Z-1-001/Muebles/Mesa de Luz(Trasera).png"
+dest_files=["res://.godot/imported/Mesa de Luz(Trasera).png-9ae59585bd1a804842eab0c572b32aaa.ctex"]
 
 [params]
 

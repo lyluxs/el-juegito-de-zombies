@@ -3,12 +3,12 @@ extends CharacterBody2D
 
 signal zombie_muerto
 
-@export_group("Estadísticas")
+@export_group("Statistics")
 @export var velocidad: float = 30.0
 @export var vida: int = 3
 @export var tiempo_entre_ataques: float = 2.0
 
-@export_group("Apariencia")
+@export_group("Appearance")
 @export_enum(
 	"Normal",
 	"Silly",
@@ -41,20 +41,20 @@ func _ready() -> void:
 
 func aplicar_skin() -> void:
 
-	print("Seleccionando skin: ", tipo_skin)
-	print("Cantidad de skins: ", skins.size())
+	print("Selecting skin: ", tipo_skin)
+	print("Number of skins: ", skins.size())
 
 	if tipo_skin < 0 or tipo_skin >= skins.size():
-		push_warning("El índice de la skin no existe")
+		push_warning("Skin index does not exist")
 		return
 
 	if skins[tipo_skin] == null:
-		push_warning("La skin seleccionada está vacía")
+		push_warning("Selected skin is empty")
 		return
 
 	animated_sprite.sprite_frames = skins[tipo_skin]
 
-	print("Skin aplicada correctamente: ", tipo_skin)
+	print("Skin applied successfully: ", tipo_skin)
 
 
 func _physics_process(_delta: float) -> void:
@@ -93,7 +93,7 @@ func _on_detection_area_body_entered(body: Node2D) -> void:
 
 	if body.is_in_group("player") and not muriendo:
 		objetivo = body
-		print("PLAYER DETECTADO")
+		print("PLAYER DETECTED")
 
 
 func _on_detection_area_body_exited(body: Node2D) -> void:
@@ -101,7 +101,7 @@ func _on_detection_area_body_exited(body: Node2D) -> void:
 	if body == objetivo:
 		if not perseguir_por_disparo:
 			objetivo = null
-			print("PLAYER SALIÓ DEL ÁREA")
+			print("PLAYER LEFT DETECTION AREA")
 
 
 func _on_attack_area_body_entered(body: Node2D) -> void:
@@ -129,8 +129,8 @@ func atacar_repetidamente() -> void:
 		if not is_instance_valid(jugador_en_rango):
 			break
 
-		if jugador_en_rango.has_method("recibir_golpe"):
-			jugador_en_rango.recibir_golpe()
+		if jugador_en_rango.has_method("receive_damage"):
+			jugador_en_rango.receive_damage()
 
 		await get_tree().create_timer(
 			tiempo_entre_ataques
@@ -149,12 +149,12 @@ func recibir_golpe() -> void:
 	if is_instance_valid(jugador) and jugador is Node2D:
 		objetivo = jugador
 		perseguir_por_disparo = true
-		print("¡ZOMBI ALERTADO!")
+		print("ZOMBIE ALERTED!")
 
 	recibiendo_dano = true
 	vida -= 1
 
-	print("Vida del zombie: ", vida)
+	print("Zombie health: ", vida)
 
 	if vida <= 0:
 		morir()

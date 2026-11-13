@@ -1,8 +1,8 @@
 [gd_resource type="SpriteFrames" format=3 uid="uid://bnq85s7ofomhs"]
 
-[ext_resource type="Texture2D" uid="uid://8ea4j6mus80a" path="res://Zombies-20261005T172857Z-1-001/Zombies/hurt zombie.png" id="1_g88nl"]
-[ext_resource type="Texture2D" uid="uid://cq2xcleub3kjw" path="res://Zombies-20261005T172857Z-1-001/Zombies/death zombie.png" id="2_44l4q"]
-[ext_resource type="Texture2D" uid="uid://3m7eip0ix2vn" path="res://Zombies-20261005T172857Z-1-001/Zombies/Zombie (Amarillo)(Walk)(10x11).png" id="3_nsph0"]
+[ext_resource type="Texture2D" uid="uid://8ea4j6mus80a" path="res://Assets/Zombies-20261005T172857Z-1-001/Zombies/hurt zombie.png" id="1_g88nl"]
+[ext_resource type="Texture2D" uid="uid://cq2xcleub3kjw" path="res://Assets/Zombies-20261005T172857Z-1-001/Zombies/death zombie.png" id="2_44l4q"]
+[ext_resource type="Texture2D" uid="uid://3m7eip0ix2vn" path="res://Assets/Zombies-20261005T172857Z-1-001/Zombies/Zombie (Amarillo)(Walk)(10x11).png" id="3_nsph0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_emciw"]
 atlas = ExtResource("1_g88nl")

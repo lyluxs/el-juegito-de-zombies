@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://rfmyd5464lrt"
-path="res://.godot/imported/debris.png-1e29bd0547447836340dccb1b6ffbf67.ctex"
+path="res://.godot/imported/debris.png-3eaa3e551e95f29d7001af38ddcd1bc6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Debris-20261005T172924Z-1-001/Debris/debris.png"
-dest_files=["res://.godot/imported/debris.png-1e29bd0547447836340dccb1b6ffbf67.ctex"]
+source_file="res://Assets/Debris-20261005T172924Z-1-001/Debris/debris.png"
+dest_files=["res://.godot/imported/debris.png-3eaa3e551e95f29d7001af38ddcd1bc6.ctex"]
 
 [params]
 

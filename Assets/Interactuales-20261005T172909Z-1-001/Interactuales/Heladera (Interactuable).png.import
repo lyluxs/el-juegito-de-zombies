@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bdinwf06gq3fp"
-path="res://.godot/imported/Heladera (Interactuable).png-3b8ad7f56f98475c122570c47410539d.ctex"
+path="res://.godot/imported/Heladera (Interactuable).png-c5c687d9f0728a09c35f75956433adfe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Interactuales-20261005T172909Z-1-001/Interactuales/Heladera (Interactuable).png"
-dest_files=["res://.godot/imported/Heladera (Interactuable).png-3b8ad7f56f98475c122570c47410539d.ctex"]
+source_file="res://Assets/Interactuales-20261005T172909Z-1-001/Interactuales/Heladera (Interactuable).png"
+dest_files=["res://.godot/imported/Heladera (Interactuable).png-c5c687d9f0728a09c35f75956433adfe.ctex"]
 
 [params]
 

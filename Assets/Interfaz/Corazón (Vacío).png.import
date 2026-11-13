@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://rrjk0cbllh8p"
-path="res://.godot/imported/Corazón (Vacío).png-38465243470f101e507e318ac2a1a10d.ctex"
+path="res://.godot/imported/Corazón (Vacío).png-6a5c17dba3ceac29c0f8b970037641fa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Interfaz/Corazón (Vacío).png"
-dest_files=["res://.godot/imported/Corazón (Vacío).png-38465243470f101e507e318ac2a1a10d.ctex"]
+source_file="res://Assets/Interfaz/Corazón (Vacío).png"
+dest_files=["res://.godot/imported/Corazón (Vacío).png-6a5c17dba3ceac29c0f8b970037641fa.ctex"]
 
 [params]
 

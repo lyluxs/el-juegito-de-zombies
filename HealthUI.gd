@@ -1,13 +1,13 @@
 
 extends CanvasLayer
 
-@export var jugador: Node2D
+@export var player: Node2D
 
-@export var corazon_lleno: Texture2D
-@export var corazon_mitad: Texture2D
-@export var corazon_vacio: Texture2D
+@export var full_heart: Texture2D
+@export var half_heart: Texture2D
+@export var empty_heart: Texture2D
 
-@onready var corazones: Array[TextureRect] = [
+@onready var hearts: Array[TextureRect] = [
 	$HBoxContainer/Heart1,
 	$HBoxContainer/Heart2,
 	$HBoxContainer/Heart3
@@ -15,20 +15,20 @@ extends CanvasLayer
 
 
 func _ready():
-	if jugador:
-		jugador.vida_cambiada.connect(actualizar_vida)
-		actualizar_vida(jugador.vida_actual)
+	if player:
+		player.health_changed.connect(update_health)
+		update_health(player.current_health)
 	else:
-		push_warning("No asignaste el jugador en el Inspector")
+		push_warning("Player no esta asignado w")
 
 
-func actualizar_vida(vida: int):
-	for i in range(corazones.size()):
-		var vida_corazon = vida - (i * 2)
+func update_health(health: int):
+	for i in range(hearts.size()):
+		var heart_health = health - (i * 2)
 
-		if vida_corazon >= 2:
-			corazones[i].texture = corazon_lleno
-		elif vida_corazon == 1:
-			corazones[i].texture = corazon_mitad
+		if heart_health >= 2:
+			hearts[i].texture = full_heart
+		elif heart_health == 1:
+			hearts[i].texture = half_heart
 		else:
-			corazones[i].texture = corazon_vacio
+			hearts[i].texture = empty_heart

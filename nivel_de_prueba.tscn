@@ -5,24 +5,27 @@
 [ext_resource type="Script" uid="uid://diqmu0jhok8sr" path="res://camera_2d.gd" id="2_0q6hu"]
 [ext_resource type="PackedScene" uid="uid://c02eep3h2lnx" path="res://player.tscn" id="2_5mnk7"]
 [ext_resource type="Script" uid="uid://cnhfgelav3i7a" path="res://cafe.gd" id="3_dpnas"]
-[ext_resource type="Texture2D" uid="uid://1wi0avfofr3l" path="res://Interactuales-20261005T172909Z-1-001/cafe.png" id="4_gdnvi"]
-[ext_resource type="Texture2D" uid="uid://8ea4j6mus80a" path="res://Zombies-20261005T172857Z-1-001/Zombies/hurt zombie.png" id="4_qkoo6"]
-[ext_resource type="Texture2D" uid="uid://cq2xcleub3kjw" path="res://Zombies-20261005T172857Z-1-001/Zombies/death zombie.png" id="5_r4tps"]
+[ext_resource type="Texture2D" uid="uid://1wi0avfofr3l" path="res://Assets/Interactuales-20261005T172909Z-1-001/cafe.png" id="4_gdnvi"]
+[ext_resource type="Texture2D" uid="uid://8ea4j6mus80a" path="res://Assets/Zombies-20261005T172857Z-1-001/Zombies/hurt zombie.png" id="4_qkoo6"]
+[ext_resource type="Texture2D" uid="uid://6vsqwvonc4ub" path="res://Assets/Interfaz/Corazón (Completo).png" id="5_28swu"]
+[ext_resource type="Texture2D" uid="uid://cq2xcleub3kjw" path="res://Assets/Zombies-20261005T172857Z-1-001/Zombies/death zombie.png" id="5_r4tps"]
 [ext_resource type="PackedScene" uid="uid://dxw7tv3480qs0" path="res://dona.tscn" id="5_yak88"]
 [ext_resource type="PackedScene" uid="uid://d1roton4q51y" path="res://zombie.tscn" id="5_ym4tk"]
+[ext_resource type="Texture2D" uid="uid://dxeny76gau1dc" path="res://Assets/Interfaz/Corazón (Incompleto).png" id="6_emciw"]
+[ext_resource type="Texture2D" uid="uid://rrjk0cbllh8p" path="res://Assets/Interfaz/Corazón (Vacío).png" id="7_a761b"]
 [ext_resource type="PackedScene" uid="uid://b2pqbhkyk7ct8" path="res://sistema_de_vidas_grafico.tscn" id="7_i454i"]
 [ext_resource type="Script" uid="uid://dxrsrlv6mq205" path="res://mensajes.gd" id="11_peshc"]
 [ext_resource type="FontFile" uid="uid://c6cbq083ogadw" path="res://fuentestexto/Press_Start_2P/PressStart2P-Regular.ttf" id="12_y0745"]
 [ext_resource type="Script" uid="uid://4jeedpswv156" path="res://area_final.gd" id="13_5nfyk"]
-[ext_resource type="Texture2D" uid="uid://exfccww52q4r" path="res://Interfaz/contador zombies resolucion bien.png.png" id="13_ej53q"]
+[ext_resource type="Texture2D" uid="uid://exfccww52q4r" path="res://Assets/Interfaz/contador zombies resolucion bien.png.png" id="13_ej53q"]
 [ext_resource type="SpriteFrames" uid="uid://bnq85s7ofomhs" path="res://zombienormal.tres" id="13_w0py1"]
 [ext_resource type="Script" uid="uid://dpk13sdh86vwc" path="res://texture_rect.gd" id="14_5nfyk"]
-[ext_resource type="Texture2D" uid="uid://oxkvoqjm08ev" path="res://Zombies-20261005T172857Z-1-001/Zombies/Zombie Silly (Blanco)(Walk)(13x14).png" id="15_7ah6t"]
+[ext_resource type="Texture2D" uid="uid://oxkvoqjm08ev" path="res://Assets/Zombies-20261005T172857Z-1-001/Zombies/Zombie Silly (Blanco)(Walk)(13x14).png" id="15_7ah6t"]
 [ext_resource type="PackedScene" uid="uid://bg41i2yct0ygx" path="res://zombie_jefe.tscn" id="15_peg22"]
 [ext_resource type="Script" uid="uid://cg44lcj0ojldv" path="res://tutorial.gd" id="19_pa1on"]
 [ext_resource type="Script" uid="uid://7pa8awu2v3rg" path="res://mira.gd" id="20_ejfy6"]
-[ext_resource type="Texture2D" uid="uid://dmom6t7gmbami" path="res://Interfaz/Mira (Desmarcado).png" id="21_ejfy6"]
-[ext_resource type="Texture2D" uid="uid://bl6b1tkbhcxdq" path="res://Interfaz/Mira (Marcado).png" id="22_7ah6t"]
+[ext_resource type="Texture2D" uid="uid://dmom6t7gmbami" path="res://Assets/Interfaz/Mira (Desmarcado).png" id="21_ejfy6"]
+[ext_resource type="Texture2D" uid="uid://bl6b1tkbhcxdq" path="res://Assets/Interfaz/Mira (Marcado).png" id="22_7ah6t"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_47mtk"]
 font = ExtResource("12_y0745")
@@ -75,7 +78,7 @@ region = Rect2(13, 0, 13, 14)
 atlas = ExtResource("15_7ah6t")
 region = Rect2(0, 0, 13, 14)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_7ah6t"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_r4tps"]
 resource_local_to_scene = true
 animations = [{
 "frames": [{
@@ -129,7 +132,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_0q6hu"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_28swu"]
 resource_local_to_scene = true
 animations = [{
 "frames": [{
@@ -183,7 +186,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_qkoo6"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_emciw"]
 resource_local_to_scene = true
 animations = [{
 "frames": [{
@@ -260,8 +263,11 @@ position = Vector2(39, 86)
 script = ExtResource("2_0q6hu")
 jugador = NodePath("../../Player")
 
-[node name="Sistema de vidas grafico" parent="UI/Camera2D" unique_id=2002290705 node_paths=PackedStringArray("jugador") instance=ExtResource("7_i454i")]
-jugador = NodePath("../../../Player")
+[node name="Sistema de vidas grafico" parent="UI/Camera2D" unique_id=2002290705 node_paths=PackedStringArray("player") instance=ExtResource("7_i454i")]
+player = NodePath("../../../Player")
+full_heart = ExtResource("5_28swu")
+half_heart = ExtResource("6_emciw")
+empty_heart = ExtResource("7_a761b")
 
 [node name="ContadorDeZombies" type="TextureRect" parent="UI/Camera2D" unique_id=364873802]
 offset_left = 48.0
@@ -343,7 +349,7 @@ position = Vector2(211, 99)
 velocidad = 50.0
 vida = 4
 tipo_skin = 1
-skins = Array[SpriteFrames]([null, SubResource("SpriteFrames_7ah6t"), null, null, null, null, null])
+skins = Array[SpriteFrames]([null, SubResource("SpriteFrames_r4tps"), null, null, null, null, null])
 
 [node name="Zona3" type="Node2D" parent="." unique_id=1828645731]
 position = Vector2(-18, -5)
@@ -353,7 +359,7 @@ position = Vector2(387, 99)
 velocidad = 50.0
 tiempo_entre_ataques = 1.0
 tipo_skin = 1
-skins = Array[SpriteFrames]([null, SubResource("SpriteFrames_0q6hu"), null, null, null, null, null])
+skins = Array[SpriteFrames]([null, SubResource("SpriteFrames_28swu"), null, null, null, null, null])
 
 [node name="Zona4" type="Node2D" parent="." unique_id=1952825991]
 
@@ -362,7 +368,7 @@ position = Vector2(502, 33)
 velocidad = 50.0
 tiempo_entre_ataques = 1.0
 tipo_skin = 1
-skins = Array[SpriteFrames]([null, SubResource("SpriteFrames_qkoo6"), null, null, null, null, null])
+skins = Array[SpriteFrames]([null, SubResource("SpriteFrames_emciw"), null, null, null, null, null])
 
 [node name="Zombie" parent="Zona4" unique_id=85013222 instance=ExtResource("5_ym4tk")]
 position = Vector2(431, 33)

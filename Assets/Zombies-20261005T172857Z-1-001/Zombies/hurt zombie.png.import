@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://8ea4j6mus80a"
-path="res://.godot/imported/hurt zombie.png-1e2fa4962b7032cb349da75066a7d379.ctex"
+path="res://.godot/imported/hurt zombie.png-b3d3c86d6cdc64714283803810cf2d90.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Zombies-20261005T172857Z-1-001/Zombies/hurt zombie.png"
-dest_files=["res://.godot/imported/hurt zombie.png-1e2fa4962b7032cb349da75066a7d379.ctex"]
+source_file="res://Assets/Zombies-20261005T172857Z-1-001/Zombies/hurt zombie.png"
+dest_files=["res://.godot/imported/hurt zombie.png-b3d3c86d6cdc64714283803810cf2d90.ctex"]
 
 [params]
 

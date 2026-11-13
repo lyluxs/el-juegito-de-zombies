@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://blxv4lkd0umi4"
-path="res://.godot/imported/Dona (Interactuable).png-03360acd2ac39c42c6ee32d5e8f28122.ctex"
+path="res://.godot/imported/Dona (Interactuable).png-97572665b478e7e0f7f003b0f8cc9c41.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Interactuales-20261005T172909Z-1-001/Interactuales/Dona (Interactuable).png"
-dest_files=["res://.godot/imported/Dona (Interactuable).png-03360acd2ac39c42c6ee32d5e8f28122.ctex"]
+source_file="res://Assets/Interactuales-20261005T172909Z-1-001/Interactuales/Dona (Interactuable).png"
+dest_files=["res://.godot/imported/Dona (Interactuable).png-97572665b478e7e0f7f003b0f8cc9c41.ctex"]
 
 [params]
 

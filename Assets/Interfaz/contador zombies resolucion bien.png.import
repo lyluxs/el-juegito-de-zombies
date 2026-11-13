@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bpm0dxqmuxd7o"
-path="res://.godot/imported/contador zombies resolucion bien.png-db9ad0bcd0506a5bf5ebc1b7b69203b3.ctex"
+path="res://.godot/imported/contador zombies resolucion bien.png-a7efb7a68e4f7beb60c18ddacfa62fb0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Interfaz/contador zombies resolucion bien.png"
-dest_files=["res://.godot/imported/contador zombies resolucion bien.png-db9ad0bcd0506a5bf5ebc1b7b69203b3.ctex"]
+source_file="res://Assets/Interfaz/contador zombies resolucion bien.png"
+dest_files=["res://.godot/imported/contador zombies resolucion bien.png-a7efb7a68e4f7beb60c18ddacfa62fb0.ctex"]
 
 [params]
 

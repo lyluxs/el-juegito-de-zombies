@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d0xro2jut50hk"
-path="res://.godot/imported/pileta.png-0cf2b93b45bf5a8af75d62aa44d9f4ea.ctex"
+path="res://.godot/imported/pileta.png-853da2992e599e49ab12858a9fb21733.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Muebles-20261005T172904Z-1-001/Muebles/pileta.png"
-dest_files=["res://.godot/imported/pileta.png-0cf2b93b45bf5a8af75d62aa44d9f4ea.ctex"]
+source_file="res://Assets/Muebles-20261005T172904Z-1-001/Muebles/pileta.png"
+dest_files=["res://.godot/imported/pileta.png-853da2992e599e49ab12858a9fb21733.ctex"]
 
 [params]
 

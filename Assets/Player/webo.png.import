@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://74l1lngibyr7"
-path="res://.godot/imported/webo.png-07904e0f82bbdb7a441a9b4f888de8e6.ctex"
+path="res://.godot/imported/webo.png-96e409041b14b10c7381ffd241ff59e8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Player/webo.png"
-dest_files=["res://.godot/imported/webo.png-07904e0f82bbdb7a441a9b4f888de8e6.ctex"]
+source_file="res://Assets/Player/webo.png"
+dest_files=["res://.godot/imported/webo.png-96e409041b14b10c7381ffd241ff59e8.ctex"]
 
 [params]
 

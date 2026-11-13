@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b32ycru4iwfaw"
-path="res://.godot/imported/Alfombra(Pequeña).png-50f961a26ada31ff3b6a9e0eff77a6cb.ctex"
+path="res://.godot/imported/Alfombra(Pequeña).png-4c5d2fd00439c4b514d1de1f7c9b28a1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Muebles-20261005T172904Z-1-001/Muebles/Alfombra(Pequeña).png"
-dest_files=["res://.godot/imported/Alfombra(Pequeña).png-50f961a26ada31ff3b6a9e0eff77a6cb.ctex"]
+source_file="res://Assets/Muebles-20261005T172904Z-1-001/Muebles/Alfombra(Pequeña).png"
+dest_files=["res://.godot/imported/Alfombra(Pequeña).png-4c5d2fd00439c4b514d1de1f7c9b28a1.ctex"]
 
 [params]
 

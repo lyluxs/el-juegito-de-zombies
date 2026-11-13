@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ydlng3003cb3"
-path="res://.godot/imported/Café (Interactuable).png-ea994d66cee9ba28e52caa777535f777.ctex"
+path="res://.godot/imported/Café (Interactuable).png-c9a74fced542b3f00ffd12696934af4f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Interactuales-20261005T172909Z-1-001/Interactuales/Café (Interactuable).png"
-dest_files=["res://.godot/imported/Café (Interactuable).png-ea994d66cee9ba28e52caa777535f777.ctex"]
+source_file="res://Assets/Interactuales-20261005T172909Z-1-001/Interactuales/Café (Interactuable).png"
+dest_files=["res://.godot/imported/Café (Interactuable).png-c9a74fced542b3f00ffd12696934af4f.ctex"]
 
 [params]
 

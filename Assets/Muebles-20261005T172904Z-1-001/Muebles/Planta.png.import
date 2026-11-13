@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dtw7ttpm4kj04"
-path="res://.godot/imported/Planta.png-250cc59a1ddb89d985c59ba9484890dc.ctex"
+path="res://.godot/imported/Planta.png-4fcc9a6cf38120caf0a29dd86c6e04cf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Muebles-20261005T172904Z-1-001/Muebles/Planta.png"
-dest_files=["res://.godot/imported/Planta.png-250cc59a1ddb89d985c59ba9484890dc.ctex"]
+source_file="res://Assets/Muebles-20261005T172904Z-1-001/Muebles/Planta.png"
+dest_files=["res://.godot/imported/Planta.png-4fcc9a6cf38120caf0a29dd86c6e04cf.ctex"]
 
 [params]
 

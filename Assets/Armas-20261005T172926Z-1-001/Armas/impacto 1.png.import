@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://g7ag08njrtdn"
-path="res://.godot/imported/impacto 1.png-3217ddecb654492e1ee229bfd73d0eaa.ctex"
+path="res://.godot/imported/impacto 1.png-f1b0637bb58a121df1adb9b412463f30.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Armas-20261005T172926Z-1-001/Armas/impacto 1.png"
-dest_files=["res://.godot/imported/impacto 1.png-3217ddecb654492e1ee229bfd73d0eaa.ctex"]
+source_file="res://Assets/Armas-20261005T172926Z-1-001/Armas/impacto 1.png"
+dest_files=["res://.godot/imported/impacto 1.png-f1b0637bb58a121df1adb9b412463f30.ctex"]
 
 [params]
 

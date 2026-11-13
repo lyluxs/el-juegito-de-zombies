@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dxeny76gau1dc"
-path="res://.godot/imported/Corazón (Incompleto).png-9a372e26d86309db1a5f8cbddff54547.ctex"
+path="res://.godot/imported/Corazón (Incompleto).png-9453d3a08eb1e90cfbd7143a45186b8e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Interfaz/Corazón (Incompleto).png"
-dest_files=["res://.godot/imported/Corazón (Incompleto).png-9a372e26d86309db1a5f8cbddff54547.ctex"]
+source_file="res://Assets/Interfaz/Corazón (Incompleto).png"
+dest_files=["res://.godot/imported/Corazón (Incompleto).png-9453d3a08eb1e90cfbd7143a45186b8e.ctex"]
 
 [params]
 

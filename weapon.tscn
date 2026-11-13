@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bbqkcuptq4osi"]
 
 [ext_resource type="Script" uid="uid://beyt7wa6b2txr" path="res://weapon.gd" id="1_o2wld"]
-[ext_resource type="Texture2D" uid="uid://2drlj3b3fkv6" path="res://Armas-20261005T172926Z-1-001/Armas/Pistol.png" id="1_swcir"]
+[ext_resource type="Texture2D" uid="uid://2drlj3b3fkv6" path="res://Assets/Armas-20261005T172926Z-1-001/Armas/Pistol.png" id="1_swcir"]
 
 [node name="Weapon" type="Node2D" unique_id=1109859132]
 script = ExtResource("1_o2wld")
@@ -11,4 +11,4 @@ position = Vector2(12, 0)
 texture = ExtResource("1_swcir")
 
 [node name="BulletSpawn" type="Marker2D" parent="." unique_id=1779563800]
-position = Vector2(10, 1)
+position = Vector2(14, 0)

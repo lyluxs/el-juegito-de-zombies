@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6upkykr3xxif"
-path="res://.godot/imported/Blood decal (small).png-140624fce7feea4839c746800c0bc229.ctex"
+uid="uid://dwf2fris43m47"
+path="res://.godot/imported/Blood decal (medium).png-4cdc96e8be947cfc489db1db66e1a0f7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sangre/Blood decal (small).png"
-dest_files=["res://.godot/imported/Blood decal (small).png-140624fce7feea4839c746800c0bc229.ctex"]
+source_file="res://Assets/Sangre/Blood decal (medium).png"
+dest_files=["res://.godot/imported/Blood decal (medium).png-4cdc96e8be947cfc489db1db66e1a0f7.ctex"]
 
 [params]
 

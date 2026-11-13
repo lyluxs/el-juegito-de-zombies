@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://8ktovethfb0t"
-path="res://.godot/imported/Metralleta.png-33be761362175b2240fa557d74121abf.ctex"
+path="res://.godot/imported/Metralleta.png-5f59adbb1833a7a9fffd2573d91ca6cf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Armas-20261005T172926Z-1-001/Armas/Metralleta.png"
-dest_files=["res://.godot/imported/Metralleta.png-33be761362175b2240fa557d74121abf.ctex"]
+source_file="res://Assets/Armas-20261005T172926Z-1-001/Armas/Metralleta.png"
+dest_files=["res://.godot/imported/Metralleta.png-5f59adbb1833a7a9fffd2573d91ca6cf.ctex"]
 
 [params]
 

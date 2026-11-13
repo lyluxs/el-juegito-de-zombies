@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://m83rchvnpo0c"
-path="res://.godot/imported/disparo1.png-e308bc9d9051432ec575be052c96586e.ctex"
+path="res://.godot/imported/disparo1.png-8c9585741f0cb5b7bbff0468eddbb5ee.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Armas-20261005T172926Z-1-001/Armas/disparo1.png"
-dest_files=["res://.godot/imported/disparo1.png-e308bc9d9051432ec575be052c96586e.ctex"]
+source_file="res://Assets/Armas-20261005T172926Z-1-001/Armas/disparo1.png"
+dest_files=["res://.godot/imported/disparo1.png-8c9585741f0cb5b7bbff0468eddbb5ee.ctex"]
 
 [params]
 

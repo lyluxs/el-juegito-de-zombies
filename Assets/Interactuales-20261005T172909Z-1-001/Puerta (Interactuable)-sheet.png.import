@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dgo6tkwkfxtsl"
-path="res://.godot/imported/Puerta (Interactuable)-sheet.png-b50f6d8e8d18e8c0d2c6ff4b21fb3a40.ctex"
+path="res://.godot/imported/Puerta (Interactuable)-sheet.png-30c2c7d6ea3f60fcc7cde802dfa6038f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Interactuales-20261005T172909Z-1-001/Puerta (Interactuable)-sheet.png"
-dest_files=["res://.godot/imported/Puerta (Interactuable)-sheet.png-b50f6d8e8d18e8c0d2c6ff4b21fb3a40.ctex"]
+source_file="res://Assets/Interactuales-20261005T172909Z-1-001/Puerta (Interactuable)-sheet.png"
+dest_files=["res://.godot/imported/Puerta (Interactuable)-sheet.png-30c2c7d6ea3f60fcc7cde802dfa6038f.ctex"]
 
 [params]
 

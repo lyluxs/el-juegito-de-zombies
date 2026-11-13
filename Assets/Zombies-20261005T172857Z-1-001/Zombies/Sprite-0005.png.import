@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cubwhoauulpyl"
-path="res://.godot/imported/Sprite-0005.png-4c05a987fe220b60f0b815bd05850e12.ctex"
+path="res://.godot/imported/Sprite-0005.png-2b0b2e121c18ef69efdd3d933dc10691.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Zombies-20261005T172857Z-1-001/Zombies/Sprite-0005.png"
-dest_files=["res://.godot/imported/Sprite-0005.png-4c05a987fe220b60f0b815bd05850e12.ctex"]
+source_file="res://Assets/Zombies-20261005T172857Z-1-001/Zombies/Sprite-0005.png"
+dest_files=["res://.godot/imported/Sprite-0005.png-2b0b2e121c18ef69efdd3d933dc10691.ctex"]
 
 [params]
 
