@@ -10,7 +10,7 @@ extends Control
 func _ready() -> void:
 	fondo.color = Color.BLACK
 
-	titulo.text = "ALPHA COMPLETADA"
+	titulo.text = "BETA COMPLETADA"
 	titulo.modulate.a = 0.0
 	titulo.pivot_offset = titulo.size / 2.0
 	titulo.scale = Vector2(0.95, 0.95)

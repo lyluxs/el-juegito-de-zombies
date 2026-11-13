@@ -1,24 +1,49 @@
 [gd_scene format=4 uid="uid://c5ffyfve1y2hj"]
 
-[ext_resource type="Texture2D" uid="uid://tt0ewuoloryl" path="res://Tiles-20261005T172859Z-1-001/Tiles/tile-fondo - copia.png" id="1_05x41"]
-[ext_resource type="Texture2D" uid="uid://uxwllhjnl5ps" path="res://Tiles-20261005T172859Z-1-001/Tiles/Tile (Piso).png" id="1_c7s6e"]
-[ext_resource type="Texture2D" uid="uid://015vd1rhc5fb" path="res://Interactuales-20261005T172909Z-1-001/Heladera (Interactuable).png" id="3_bssq0"]
-[ext_resource type="Texture2D" uid="uid://c37f0iwbo8gke" path="res://Muebles-20261005T172904Z-1-001/Muebles/horno.png" id="4_iw27f"]
-[ext_resource type="Texture2D" uid="uid://d0xro2jut50hk" path="res://Muebles-20261005T172904Z-1-001/Muebles/pileta.png" id="5_71pa8"]
-[ext_resource type="Texture2D" uid="uid://dj0iofpven0b" path="res://Muebles-20261005T172904Z-1-001/Muebles/mesa.png" id="6_iw27f"]
+[ext_resource type="Texture2D" uid="uid://tt0ewuoloryl" path="res://Assets/Tiles-20261005T172859Z-1-001/Tiles/tile-fondo - copia.png" id="1_05x41"]
+[ext_resource type="Texture2D" uid="uid://uxwllhjnl5ps" path="res://Assets/Tiles-20261005T172859Z-1-001/Tiles/Tile (Piso).png" id="1_c7s6e"]
+[ext_resource type="Texture2D" uid="uid://015vd1rhc5fb" path="res://Assets/Interactuales-20261005T172909Z-1-001/Heladera (Interactuable).png" id="3_bssq0"]
+[ext_resource type="Texture2D" uid="uid://c37f0iwbo8gke" path="res://Assets/Muebles-20261005T172904Z-1-001/Muebles/horno.png" id="4_iw27f"]
+[ext_resource type="Texture2D" uid="uid://d0xro2jut50hk" path="res://Assets/Muebles-20261005T172904Z-1-001/Muebles/pileta.png" id="5_71pa8"]
+[ext_resource type="Texture2D" uid="uid://dj0iofpven0b" path="res://Assets/Muebles-20261005T172904Z-1-001/Muebles/mesa.png" id="6_iw27f"]
 [ext_resource type="Script" uid="uid://c7d6a47g3ryns" path="res://puerta.gd" id="7_05x41"]
-[ext_resource type="Texture2D" uid="uid://dgo6tkwkfxtsl" path="res://Interactuales-20261005T172909Z-1-001/Puerta (Interactuable)-sheet.png" id="8_gqbix"]
-[ext_resource type="Texture2D" uid="uid://ci24l0dbinwgu" path="res://Muebles-20261005T172904Z-1-001/Muebles/Mesa Grande.png" id="10_6qsgm"]
-[ext_resource type="Texture2D" uid="uid://cbp54fnl1booy" path="res://Sangre/Blood decal (Large).png" id="11_ooc2g"]
-[ext_resource type="Texture2D" uid="uid://bh8quv2c22xcc" path="res://Muebles-20261005T172904Z-1-001/Muebles/Cuadro (Montana).png" id="12_2wwcf"]
-[ext_resource type="Texture2D" uid="uid://brb26p8xn7cgb" path="res://Muebles-20261005T172904Z-1-001/Muebles/Cama.png" id="13_6qsgm"]
-[ext_resource type="Texture2D" uid="uid://btv680lcf2k7r" path="res://Muebles-20261005T172904Z-1-001/Muebles/Mesa de Luz(Trasera).png" id="13_bssq0"]
-[ext_resource type="Texture2D" uid="uid://2fpxl0dvuqd4" path="res://Muebles-20261005T172904Z-1-001/Muebles/Cuadro (Lampara).png" id="13_ooc2g"]
-[ext_resource type="Texture2D" uid="uid://gd7tx2gojy03" path="res://Muebles-20261005T172904Z-1-001/Muebles/Mesa de Luz.png" id="14_jk4ss"]
-[ext_resource type="Texture2D" uid="uid://dtw7ttpm4kj04" path="res://Muebles-20261005T172904Z-1-001/Muebles/Planta.png" id="15_r5om4"]
-[ext_resource type="Texture2D" uid="uid://dwf2fris43m47" path="res://Sangre/Blood decal (medium).png" id="16_jky6x"]
-[ext_resource type="Texture2D" uid="uid://c6upkykr3xxif" path="res://Sangre/Blood decal (small).png" id="17_4sf5t"]
-[ext_resource type="Texture2D" uid="uid://c31y05rqgfgbf" path="res://Muebles-20261005T172904Z-1-001/Muebles/Cuadro (Pentragama).png" id="19_3mr0t"]
+[ext_resource type="Texture2D" uid="uid://dgo6tkwkfxtsl" path="res://Assets/Interactuales-20261005T172909Z-1-001/Puerta (Interactuable)-sheet.png" id="8_gqbix"]
+[ext_resource type="Texture2D" uid="uid://ci24l0dbinwgu" path="res://Assets/Muebles-20261005T172904Z-1-001/Muebles/Mesa Grande.png" id="10_6qsgm"]
+[ext_resource type="Texture2D" uid="uid://cbp54fnl1booy" path="res://Assets/Sangre/Blood decal (Large).png" id="11_ooc2g"]
+[ext_resource type="Texture2D" uid="uid://bh8quv2c22xcc" path="res://Assets/Muebles-20261005T172904Z-1-001/Muebles/Cuadro (Montana).png" id="12_2wwcf"]
+[ext_resource type="Texture2D" uid="uid://brb26p8xn7cgb" path="res://Assets/Muebles-20261005T172904Z-1-001/Muebles/Cama.png" id="13_6qsgm"]
+[ext_resource type="Texture2D" uid="uid://btv680lcf2k7r" path="res://Assets/Muebles-20261005T172904Z-1-001/Muebles/Mesa de Luz(Trasera).png" id="13_bssq0"]
+[ext_resource type="Texture2D" uid="uid://2fpxl0dvuqd4" path="res://Assets/Muebles-20261005T172904Z-1-001/Muebles/Cuadro (Lampara).png" id="13_ooc2g"]
+[ext_resource type="Texture2D" uid="uid://gd7tx2gojy03" path="res://Assets/Muebles-20261005T172904Z-1-001/Muebles/Mesa de Luz.png" id="14_jk4ss"]
+[ext_resource type="Texture2D" uid="uid://dtw7ttpm4kj04" path="res://Assets/Muebles-20261005T172904Z-1-001/Muebles/Planta.png" id="15_r5om4"]
+[ext_resource type="Texture2D" uid="uid://dwf2fris43m47" path="res://Assets/Sangre/Blood decal (medium).png" id="16_jky6x"]
+[ext_resource type="Texture2D" uid="uid://c6upkykr3xxif" path="res://Assets/Sangre/Blood decal (small).png" id="17_4sf5t"]
+[ext_resource type="Texture2D" uid="uid://c31y05rqgfgbf" path="res://Assets/Muebles-20261005T172904Z-1-001/Muebles/Cuadro (Pentragama).png" id="19_3mr0t"]
+[ext_resource type="Texture2D" uid="uid://b32ycru4iwfaw" path="res://Assets/Muebles-20261005T172904Z-1-001/Muebles/Alfombra(Pequeña).png" id="20_7vxqa"]
+[ext_resource type="Texture2D" uid="uid://k8ufr6q3w6jl" path="res://Assets/Muebles-20261005T172904Z-1-001/Muebles/Sofa (Grande)(Lado).png" id="21_qw8h8"]
+[ext_resource type="Texture2D" uid="uid://dhjsncx0ocafw" path="res://Assets/Muebles-20261005T172904Z-1-001/Muebles/Sofa (Chico).png" id="22_meq34"]
+[ext_resource type="Texture2D" uid="uid://dpo57ycdwhhd5" path="res://Assets/Muebles-20261005T172904Z-1-001/Muebles/Sofa (Chico)(Trasero).png" id="23_yy28u"]
+[ext_resource type="Texture2D" uid="uid://bw7fj4i3xjnc6" path="res://Assets/Muebles-20261005T172904Z-1-001/Muebles/Lampara (Piso).png" id="24_a454a"]
+[ext_resource type="Texture2D" uid="uid://cgnuud0t2gsrj" path="res://Assets/Muebles-20261005T172904Z-1-001/Muebles/Tv (Lado).png" id="25_te172"]
+[ext_resource type="Texture2D" uid="uid://cdib2yntjxbbv" path="res://Assets/Muebles-20261005T172904Z-1-001/Muebles/Planta1 (Piso).png" id="26_2kko2"]
+[ext_resource type="Texture2D" uid="uid://b2yx72opk4neb" path="res://Assets/Muebles-20261005T172904Z-1-001/Muebles/Silla (Lado).png" id="27_kpdfo"]
+[ext_resource type="Texture2D" uid="uid://3xr5kcye3wdo" path="res://Assets/Muebles-20261005T172904Z-1-001/Muebles/Silla.png" id="28_vbtoe"]
+[ext_resource type="Texture2D" uid="uid://by3qupnwfl5dk" path="res://Assets/Muebles-20261005T172904Z-1-001/Muebles/Silla (Trasera).png" id="29_e1wd7"]
+[ext_resource type="Texture2D" uid="uid://qy8d5hfuasqd" path="res://Assets/Muebles-20261005T172904Z-1-001/Muebles/Cuadro (Noche).png" id="30_xkcq7"]
+[ext_resource type="Texture2D" uid="uid://cib3ckfkwlo5w" path="res://Assets/Muebles-20261005T172904Z-1-001/Muebles/Planta2 (Piso).png" id="31_cskkv"]
+[ext_resource type="Texture2D" uid="uid://mops68hx5r5r" path="res://Assets/Muebles-20261005T172904Z-1-001/Muebles/Caja1.png" id="32_028i1"]
+[ext_resource type="Texture2D" uid="uid://bluryi1swgb2e" path="res://Assets/Muebles-20261005T172904Z-1-001/Muebles/Caja2.png" id="33_hltbc"]
+[ext_resource type="Texture2D" uid="uid://cwepe62g6d0xl" path="res://Assets/Muebles-20261005T172904Z-1-001/Muebles/Caja3.png" id="34_y0s0d"]
+[ext_resource type="Texture2D" uid="uid://decqthwr7xays" path="res://Assets/Muebles-20261005T172904Z-1-001/Muebles/Caja6.png" id="35_iwan2"]
+[ext_resource type="Texture2D" uid="uid://dqmemkxk7mund" path="res://Assets/Muebles-20261005T172904Z-1-001/Muebles/Reloj de Piso.png" id="36_hac6k"]
+[ext_resource type="Texture2D" uid="uid://gtl2igjshi2b" path="res://Assets/Muebles-20261005T172904Z-1-001/Muebles/Caja4.png" id="37_tu3qe"]
+[ext_resource type="Texture2D" uid="uid://dq56t33g1nvth" path="res://Assets/Muebles-20261005T172904Z-1-001/Muebles/Caja5.png" id="38_epbps"]
+[ext_resource type="Texture2D" uid="uid://cn6m10icad8xb" path="res://Assets/Muebles-20261005T172904Z-1-001/Muebles/Perchero.png" id="39_xbf5p"]
+[ext_resource type="Texture2D" uid="uid://d4npsb5n04ldq" path="res://Assets/Muebles-20261005T172904Z-1-001/Muebles/Mesa Grande(Limpia).png" id="40_na5ms"]
+[ext_resource type="Texture2D" uid="uid://fsbjm5bxthh1" path="res://Assets/Muebles-20261005T172904Z-1-001/Muebles/Sofa (Grande).png" id="41_28eae"]
+[ext_resource type="Texture2D" uid="uid://dh6vj0yenyq14" path="res://Assets/Muebles-20261005T172904Z-1-001/Muebles/Sofa (Grande)(Trasero).png" id="42_kwd4m"]
+[ext_resource type="Texture2D" uid="uid://bu5x2gfg35s16" path="res://Assets/Muebles-20261005T172904Z-1-001/Muebles/Sofa (Chico)(Lado).png" id="43_1f61l"]
+[ext_resource type="Texture2D" uid="uid://bjcq6gt6e4hiy" path="res://Assets/Muebles-20261005T172904Z-1-001/Muebles/TV.png" id="44_xi453"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bssq0"]
 texture = ExtResource("1_c7s6e")
@@ -50,7 +75,7 @@ size = Vector2(15, 17)
 size = Vector2(15.5, 14.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xfeux"]
-size = Vector2(32, 16.109375)
+size = Vector2(27, 16.109375)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oysan"]
 atlas = ExtResource("8_gqbix")
@@ -140,7 +165,7 @@ size = Vector2(6, 20)
 size = Vector2(17, 21)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r2o42"]
-size = Vector2(23, 15)
+size = Vector2(24.75, 15)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bek1h"]
 size = Vector2(12, 10)
@@ -149,11 +174,8 @@ size = Vector2(12, 10)
 size = Vector2(6, 7)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xfeux"]
-radius = 26.9926
-height = 95.99214
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ygen6"]
-size = Vector2(9.5, 2)
+radius = 25.999832
+height = 95.999374
 
 [node name="Map" type="Node2D" unique_id=1224895729]
 
@@ -219,7 +241,7 @@ position = Vector2(226, 124)
 texture = ExtResource("6_iw27f")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa2" unique_id=1139564092]
-position = Vector2(226, 124.6875)
+position = Vector2(229.5, 124.6875)
 shape = SubResource("RectangleShape2D_xfeux")
 debug_color = Color(0.5520828, 0.5556779, 0.26827607, 0.41960785)
 
@@ -519,7 +541,6 @@ position = Vector2(182, -188)
 texture = ExtResource("13_6qsgm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cama4" unique_id=2010056162]
-position = Vector2(0.5, 0)
 shape = SubResource("RectangleShape2D_r2o42")
 
 [node name="Cama5" type="StaticBody2D" parent="." unique_id=138882285]
@@ -529,7 +550,7 @@ position = Vector2(102, -188)
 texture = ExtResource("13_6qsgm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cama5" unique_id=1699671861]
-position = Vector2(0.5, 0)
+position = Vector2(0.25, 0)
 shape = SubResource("RectangleShape2D_r2o42")
 
 [node name="Cama6" type="StaticBody2D" parent="." unique_id=1620377003]
@@ -539,7 +560,7 @@ position = Vector2(21, -189)
 texture = ExtResource("13_6qsgm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cama6" unique_id=277239185]
-position = Vector2(0.5, 0)
+position = Vector2(0.375, 0)
 shape = SubResource("RectangleShape2D_r2o42")
 
 [node name="MesaDeLuz" type="StaticBody2D" parent="." unique_id=1109683308]
@@ -702,7 +723,7 @@ position = Vector2(-1, 0)
 texture = ExtResource("10_6qsgm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="mesagrande" unique_id=1118715429]
-position = Vector2(-1.0000001, -1.0000001)
+position = Vector2(-1, 0)
 rotation = -1.5744125
 shape = SubResource("CapsuleShape2D_xfeux")
 
@@ -724,12 +745,466 @@ position = Vector2(-88, -235)
 [node name="Sprite2D" type="Sprite2D" parent="CuadroSatanico3" unique_id=409164729]
 texture = ExtResource("19_3mr0t")
 
-[node name="Sprite2D" type="StaticBody2D" parent="." unique_id=442730121]
-position = Vector2(-148, -25)
+[node name="Alfombra(pequeña)" type="Sprite2D" parent="." unique_id=565563886]
+position = Vector2(288, 26)
+rotation = 1.5707964
+texture = ExtResource("20_7vxqa")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D" unique_id=741992490]
-position = Vector2(-5.75, -6)
-shape = SubResource("RectangleShape2D_ygen6")
+[node name="Sofa(grande)(lado)" type="Sprite2D" parent="." unique_id=1898693974]
+position = Vector2(267, 27)
+texture = ExtResource("21_qw8h8")
+
+[node name="Sofa(chico)" type="Sprite2D" parent="." unique_id=886726808]
+position = Vector2(288, 4)
+texture = ExtResource("22_meq34")
+
+[node name="Sofa(chico)(trasero)" type="Sprite2D" parent="." unique_id=1270218060]
+position = Vector2(288, 46)
+texture = ExtResource("23_yy28u")
+
+[node name="MesaDeLuz(trasera)" type="Sprite2D" parent="." unique_id=1135044848]
+position = Vector2(312.5, 29)
+texture = ExtResource("13_bssq0")
+
+[node name="Lampara(piso)" type="Sprite2D" parent="." unique_id=1310977942]
+position = Vector2(312, 1)
+texture = ExtResource("24_a454a")
+
+[node name="Tv(lado)" type="Sprite2D" parent="." unique_id=832225196]
+position = Vector2(312.5, 18)
+texture = ExtResource("25_te172")
+
+[node name="Planta1(piso)" type="Sprite2D" parent="." unique_id=1078344384]
+position = Vector2(476, 42)
+texture = ExtResource("26_2kko2")
+
+[node name="Silla(lado)" type="Sprite2D" parent="." unique_id=1731885039]
+position = Vector2(288, -176)
+texture = ExtResource("27_kpdfo")
+
+[node name="Silla(lado)3" type="Sprite2D" parent="." unique_id=1503346996]
+position = Vector2(354.5, -176)
+texture = ExtResource("27_kpdfo")
+
+[node name="Silla(lado)4" type="Sprite2D" parent="." unique_id=2142317648]
+position = Vector2(324.5, -176)
+texture = ExtResource("27_kpdfo")
+flip_h = true
+
+[node name="Silla2" type="Sprite2D" parent="." unique_id=1834307589]
+position = Vector2(339.5, -189)
+texture = ExtResource("28_vbtoe")
+
+[node name="Mesa4" type="Sprite2D" parent="." unique_id=780483078]
+position = Vector2(339.5, -174)
+texture = ExtResource("6_iw27f")
+
+[node name="Silla(trasera)2" type="Sprite2D" parent="." unique_id=1779971547]
+position = Vector2(339.5, -164)
+texture = ExtResource("29_e1wd7")
+
+[node name="Silla(lado)5" type="Sprite2D" parent="." unique_id=930491076]
+position = Vector2(420.5, -174)
+texture = ExtResource("27_kpdfo")
+
+[node name="Silla(lado)6" type="Sprite2D" parent="." unique_id=1391393639]
+position = Vector2(390.5, -174)
+texture = ExtResource("27_kpdfo")
+flip_h = true
+
+[node name="Silla3" type="Sprite2D" parent="." unique_id=987473720]
+position = Vector2(405.5, -187)
+texture = ExtResource("28_vbtoe")
+
+[node name="Mesa5" type="Sprite2D" parent="." unique_id=627870727]
+position = Vector2(405.5, -172)
+texture = ExtResource("6_iw27f")
+
+[node name="Silla(trasera)3" type="Sprite2D" parent="." unique_id=2072654526]
+position = Vector2(405.5, -162)
+texture = ExtResource("29_e1wd7")
+
+[node name="Silla(lado)2" type="Sprite2D" parent="." unique_id=1652428297]
+position = Vector2(258, -176)
+texture = ExtResource("27_kpdfo")
+flip_h = true
+
+[node name="Silla" type="Sprite2D" parent="." unique_id=1981433104]
+position = Vector2(273, -189)
+texture = ExtResource("28_vbtoe")
+
+[node name="Mesa3" type="Sprite2D" parent="." unique_id=1825490974]
+position = Vector2(273, -174)
+texture = ExtResource("6_iw27f")
+
+[node name="Silla(trasera)" type="Sprite2D" parent="." unique_id=1481399394]
+position = Vector2(273, -164)
+texture = ExtResource("29_e1wd7")
+
+[node name="Silla(lado)10" type="Sprite2D" parent="." unique_id=882336883]
+position = Vector2(287.5, -44)
+texture = ExtResource("27_kpdfo")
+
+[node name="Silla(lado)11" type="Sprite2D" parent="." unique_id=1730634019]
+position = Vector2(257.5, -44)
+texture = ExtResource("27_kpdfo")
+flip_h = true
+
+[node name="Silla5" type="Sprite2D" parent="." unique_id=2037920004]
+position = Vector2(272.5, -57)
+texture = ExtResource("28_vbtoe")
+
+[node name="Mesa7" type="Sprite2D" parent="." unique_id=380298810]
+position = Vector2(272.5, -42)
+texture = ExtResource("6_iw27f")
+
+[node name="Silla(trasera)5" type="Sprite2D" parent="." unique_id=994620936]
+position = Vector2(272.5, -32)
+texture = ExtResource("29_e1wd7")
+
+[node name="Silla(lado)13" type="Sprite2D" parent="." unique_id=659872206]
+position = Vector2(352.5, -44)
+texture = ExtResource("27_kpdfo")
+
+[node name="Silla(lado)14" type="Sprite2D" parent="." unique_id=1040896914]
+position = Vector2(322.5, -44)
+texture = ExtResource("27_kpdfo")
+flip_h = true
+
+[node name="Silla7" type="Sprite2D" parent="." unique_id=37666662]
+position = Vector2(337.5, -57)
+texture = ExtResource("28_vbtoe")
+
+[node name="Mesa9" type="Sprite2D" parent="." unique_id=1825911674]
+position = Vector2(337.5, -42)
+texture = ExtResource("6_iw27f")
+
+[node name="Silla(trasera)7" type="Sprite2D" parent="." unique_id=1926609825]
+position = Vector2(337.5, -32)
+texture = ExtResource("29_e1wd7")
+
+[node name="Silla(lado)7" type="Sprite2D" parent="." unique_id=1912831188]
+position = Vector2(481.5, -174)
+texture = ExtResource("27_kpdfo")
+
+[node name="Silla(lado)8" type="Sprite2D" parent="." unique_id=932519381]
+position = Vector2(548, -174)
+texture = ExtResource("27_kpdfo")
+
+[node name="Silla(lado)9" type="Sprite2D" parent="." unique_id=852258602]
+position = Vector2(518, -174)
+texture = ExtResource("27_kpdfo")
+flip_h = true
+
+[node name="Silla4" type="Sprite2D" parent="." unique_id=1563437108]
+position = Vector2(533, -187)
+texture = ExtResource("28_vbtoe")
+
+[node name="Mesa6" type="Sprite2D" parent="." unique_id=548369631]
+position = Vector2(533, -172)
+texture = ExtResource("6_iw27f")
+
+[node name="Silla(trasera)4" type="Sprite2D" parent="." unique_id=1825152075]
+position = Vector2(533, -162)
+texture = ExtResource("29_e1wd7")
+
+[node name="Silla(lado)12" type="Sprite2D" parent="." unique_id=559898213]
+position = Vector2(451.5, -174)
+texture = ExtResource("27_kpdfo")
+flip_h = true
+
+[node name="Silla6" type="Sprite2D" parent="." unique_id=1999599371]
+position = Vector2(466.5, -187)
+texture = ExtResource("28_vbtoe")
+
+[node name="Mesa8" type="Sprite2D" parent="." unique_id=1721302726]
+position = Vector2(466.5, -172)
+texture = ExtResource("6_iw27f")
+
+[node name="Silla(trasera)6" type="Sprite2D" parent="." unique_id=1218931878]
+position = Vector2(466.5, -162)
+texture = ExtResource("29_e1wd7")
+
+[node name="Alfombra(pequeña)2" type="Sprite2D" parent="." unique_id=1181091481]
+position = Vector2(191, -76)
+texture = ExtResource("20_7vxqa")
+
+[node name="Alfombra(pequeña)3" type="Sprite2D" parent="." unique_id=1353330884]
+position = Vector2(108, -79)
+texture = ExtResource("20_7vxqa")
+
+[node name="Alfombra(pequeña)4" type="Sprite2D" parent="." unique_id=1733331700]
+position = Vector2(27, -80)
+texture = ExtResource("20_7vxqa")
+
+[node name="Alfombra(pequeña)5" type="Sprite2D" parent="." unique_id=2092227968]
+position = Vector2(28, -170)
+texture = ExtResource("20_7vxqa")
+
+[node name="Alfombra(pequeña)6" type="Sprite2D" parent="." unique_id=1835705620]
+position = Vector2(110, -168)
+texture = ExtResource("20_7vxqa")
+
+[node name="Alfombra(pequeña)7" type="Sprite2D" parent="." unique_id=536806104]
+position = Vector2(190, -169)
+texture = ExtResource("20_7vxqa")
+
+[node name="Cuadro(noche)" type="Sprite2D" parent="." unique_id=1358017867]
+position = Vector2(149, -145)
+texture = ExtResource("30_xkcq7")
+
+[node name="Cuadro(lampara)" type="Sprite2D" parent="." unique_id=351127288]
+position = Vector2(67, -145)
+texture = ExtResource("13_ooc2g")
+
+[node name="Cuadro(lampara)4" type="Sprite2D" parent="." unique_id=1719449026]
+position = Vector2(67, -157)
+texture = ExtResource("13_ooc2g")
+
+[node name="Cuadro(lampara)2" type="Sprite2D" parent="." unique_id=215293966]
+position = Vector2(79, -145)
+texture = ExtResource("13_ooc2g")
+
+[node name="Cuadro(lampara)3" type="Sprite2D" parent="." unique_id=1231596630]
+position = Vector2(55, -145)
+texture = ExtResource("13_ooc2g")
+
+[node name="Cuadro(montana)" type="Sprite2D" parent="." unique_id=289166545]
+position = Vector2(-13, -146)
+texture = ExtResource("12_2wwcf")
+
+[node name="Planta2(piso)" type="Sprite2D" parent="." unique_id=894295529]
+position = Vector2(468, -29)
+texture = ExtResource("31_cskkv")
+
+[node name="Caja1" type="Sprite2D" parent="." unique_id=1242495339]
+position = Vector2(515, -95)
+texture = ExtResource("32_028i1")
+
+[node name="Caja2" type="Sprite2D" parent="." unique_id=1069504084]
+position = Vector2(504, -86)
+texture = ExtResource("33_hltbc")
+
+[node name="Caja3" type="Sprite2D" parent="." unique_id=935056725]
+position = Vector2(534, -87)
+texture = ExtResource("34_y0s0d")
+
+[node name="Caja6" type="Sprite2D" parent="." unique_id=1697756334]
+position = Vector2(530, -101)
+texture = ExtResource("35_iwan2")
+
+[node name="Caja4" type="Sprite2D" parent="." unique_id=2113032356]
+position = Vector2(516, -102)
+texture = ExtResource("33_hltbc")
+
+[node name="Caja5" type="Sprite2D" parent="." unique_id=264365096]
+position = Vector2(516, -79)
+texture = ExtResource("32_028i1")
+
+[node name="Caja7" type="Sprite2D" parent="." unique_id=1842514982]
+position = Vector2(539, -93)
+texture = ExtResource("33_hltbc")
+
+[node name="RelojDePiso" type="Sprite2D" parent="." unique_id=1305973285]
+position = Vector2(683, -3)
+texture = ExtResource("36_hac6k")
+
+[node name="Mesa10" type="Sprite2D" parent="." unique_id=449107660]
+position = Vector2(665, 1)
+texture = ExtResource("6_iw27f")
+
+[node name="Planta6" type="Sprite2D" parent="." unique_id=1915001998]
+position = Vector2(665, -8)
+texture = ExtResource("15_r5om4")
+
+[node name="RelojDePiso2" type="Sprite2D" parent="." unique_id=1674100183]
+position = Vector2(233, -141)
+texture = ExtResource("36_hac6k")
+
+[node name="Caja8" type="Sprite2D" parent="." unique_id=757740242]
+position = Vector2(-161.5, -39)
+texture = ExtResource("32_028i1")
+
+[node name="Caja9" type="Sprite2D" parent="." unique_id=982336446]
+position = Vector2(-138.5, -39)
+texture = ExtResource("32_028i1")
+
+[node name="Caja16" type="Sprite2D" parent="." unique_id=1474438158]
+position = Vector2(-115.5, -39)
+texture = ExtResource("32_028i1")
+
+[node name="Caja10" type="Sprite2D" parent="." unique_id=1638203257]
+position = Vector2(-153.5, -45)
+texture = ExtResource("33_hltbc")
+
+[node name="Caja11" type="Sprite2D" parent="." unique_id=1801885451]
+position = Vector2(-140.5, -49)
+texture = ExtResource("35_iwan2")
+
+[node name="Caja12" type="Sprite2D" parent="." unique_id=1456858343]
+position = Vector2(-168.5, -48)
+texture = ExtResource("37_tu3qe")
+
+[node name="Caja13" type="Sprite2D" parent="." unique_id=2050327417]
+position = Vector2(-159.5, -53)
+texture = ExtResource("38_epbps")
+
+[node name="Caja14" type="Sprite2D" parent="." unique_id=2040164924]
+position = Vector2(-147.5, -60)
+texture = ExtResource("32_028i1")
+
+[node name="Caja15" type="Sprite2D" parent="." unique_id=1473021359]
+position = Vector2(-122.5, -49)
+texture = ExtResource("34_y0s0d")
+
+[node name="Perchero" type="Sprite2D" parent="." unique_id=886411224]
+position = Vector2(498, -53)
+texture = ExtResource("39_xbf5p")
+
+[node name="MesaGrande(limpia)" type="Sprite2D" parent="." unique_id=139995868]
+position = Vector2(596, 95)
+texture = ExtResource("40_na5ms")
+
+[node name="Sofa(grande)(lado)2" type="Sprite2D" parent="." unique_id=741513844]
+position = Vector2(528, 99)
+texture = ExtResource("21_qw8h8")
+
+[node name="Sofa(grande)" type="Sprite2D" parent="." unique_id=294048288]
+position = Vector2(595, 57)
+texture = ExtResource("41_28eae")
+
+[node name="Sofa(grande)(trasero)" type="Sprite2D" parent="." unique_id=79249535]
+position = Vector2(595, 134)
+texture = ExtResource("42_kwd4m")
+
+[node name="Sofa(grande)(lado)3" type="Sprite2D" parent="." unique_id=1247788153]
+position = Vector2(659, 97)
+texture = ExtResource("21_qw8h8")
+flip_h = true
+
+[node name="MesaGrande(limpia)2" type="Sprite2D" parent="." unique_id=1183382616]
+position = Vector2(596, 77)
+texture = ExtResource("40_na5ms")
+
+[node name="MesaGrande(limpia)3" type="Sprite2D" parent="." unique_id=1642556552]
+position = Vector2(596, 57)
+texture = ExtResource("40_na5ms")
+
+[node name="Planta2(piso)2" type="Sprite2D" parent="." unique_id=1820982739]
+position = Vector2(5, -138)
+texture = ExtResource("31_cskkv")
+
+[node name="Perchero3" type="Sprite2D" parent="." unique_id=258870582]
+position = Vector2(214, -87)
+texture = ExtResource("39_xbf5p")
+
+[node name="Perchero4" type="Sprite2D" parent="." unique_id=1972729783]
+position = Vector2(132, -85)
+texture = ExtResource("39_xbf5p")
+
+[node name="Perchero5" type="Sprite2D" parent="." unique_id=773859629]
+position = Vector2(8, -90)
+texture = ExtResource("39_xbf5p")
+
+[node name="MesaGrande(limpia)4" type="Sprite2D" parent="." unique_id=1688687676]
+position = Vector2(-421, 401)
+texture = ExtResource("40_na5ms")
+
+[node name="MesaGrande(limpia)5" type="Sprite2D" parent="." unique_id=516043733]
+position = Vector2(-122, 534)
+texture = ExtResource("40_na5ms")
+
+[node name="Perchero2" type="Sprite2D" parent="." unique_id=1081817938]
+position = Vector2(-468, 520)
+texture = ExtResource("39_xbf5p")
+
+[node name="Planta2(piso)3" type="Sprite2D" parent="." unique_id=1726655186]
+position = Vector2(-159, 461)
+texture = ExtResource("31_cskkv")
+
+[node name="Planta7" type="Sprite2D" parent="." unique_id=1776130212]
+position = Vector2(-329, 527)
+texture = ExtResource("15_r5om4")
+
+[node name="Silla8" type="Sprite2D" parent="." unique_id=2086047140]
+position = Vector2(-214, 411)
+texture = ExtResource("28_vbtoe")
+
+[node name="Sofa(grande)2" type="Sprite2D" parent="." unique_id=758361347]
+position = Vector2(-333, 376)
+texture = ExtResource("41_28eae")
+
+[node name="Sofa(chico)(lado)" type="Sprite2D" parent="." unique_id=1649640709]
+position = Vector2(-235, 509)
+texture = ExtResource("43_1f61l")
+
+[node name="Sofa(chico)2" type="Sprite2D" parent="." unique_id=1565047055]
+position = Vector2(-251, 410)
+texture = ExtResource("22_meq34")
+
+[node name="Tv" type="Sprite2D" parent="." unique_id=1416970319]
+position = Vector2(-376, 457)
+texture = ExtResource("44_xi453")
+
+[node name="MesaDeLuz7" type="Sprite2D" parent="." unique_id=700346633]
+position = Vector2(-258, 470)
+texture = ExtResource("14_jk4ss")
+
+[node name="Cuadro(noche)2" type="Sprite2D" parent="." unique_id=2029103933]
+position = Vector2(-197, 351)
+texture = ExtResource("30_xkcq7")
+
+[node name="Horno2" type="Sprite2D" parent="." unique_id=797802259]
+position = Vector2(-391, 531)
+texture = ExtResource("4_iw27f")
+
+[node name="Mesa11" type="Sprite2D" parent="." unique_id=196293043]
+position = Vector2(-155, 406)
+texture = ExtResource("6_iw27f")
+
+[node name="Caja17" type="Sprite2D" parent="." unique_id=1516030557]
+position = Vector2(-95, 485)
+texture = ExtResource("34_y0s0d")
+
+[node name="Caja18" type="Sprite2D" parent="." unique_id=277441468]
+position = Vector2(-101, 394)
+texture = ExtResource("32_028i1")
+
+[node name="Alfombra(pequeña)8" type="Sprite2D" parent="." unique_id=639376099]
+position = Vector2(-318, 455)
+texture = ExtResource("20_7vxqa")
+
+[node name="Caja19" type="Sprite2D" parent="." unique_id=1046199192]
+position = Vector2(-192, 539)
+texture = ExtResource("35_iwan2")
+
+[node name="Cama7" type="Sprite2D" parent="." unique_id=1839364627]
+position = Vector2(-475, 462)
+texture = ExtResource("13_6qsgm")
+
+[node name="Caja20" type="Sprite2D" parent="." unique_id=604295615]
+position = Vector2(-359, 554)
+texture = ExtResource("33_hltbc")
+
+[node name="Caja21" type="Sprite2D" parent="." unique_id=602065707]
+position = Vector2(-280, 550)
+texture = ExtResource("37_tu3qe")
+
+[node name="Caja22" type="Sprite2D" parent="." unique_id=1957432457]
+position = Vector2(-426, 550)
+texture = ExtResource("38_epbps")
+
+[node name="Lampara(piso)2" type="Sprite2D" parent="." unique_id=1482002975]
+position = Vector2(-207, 468)
+texture = ExtResource("24_a454a")
+
+[node name="Planta1(piso)2" type="Sprite2D" parent="." unique_id=1752361376]
+position = Vector2(-345, 414)
+texture = ExtResource("26_2kko2")
+
+[node name="RelojDePiso3" type="Sprite2D" parent="." unique_id=587306302]
+position = Vector2(-419, 486)
+texture = ExtResource("36_hac6k")
 
 [connection signal="body_entered" from="Puerta/InteractionArea" to="Puerta" method="_on_interaction_area_body_entered"]
 [connection signal="body_exited" from="Puerta/InteractionArea" to="Puerta" method="_on_interaction_area_body_exited"]

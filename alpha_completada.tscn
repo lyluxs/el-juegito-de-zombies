@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://22uhe20j1xk1"]
 
 [ext_resource type="Script" uid="uid://cuxb3i03hntge" path="res://alpha_completada.gd" id="1_7n16j"]
-[ext_resource type="FontFile" uid="uid://c6cbq083ogadw" path="res://fuentes/Press_Start_2P/PressStart2P-Regular.ttf" id="2_1rpjv"]
+[ext_resource type="FontFile" uid="uid://c6cbq083ogadw" path="res://fuentestexto/Press_Start_2P/PressStart2P-Regular.ttf" id="2_1rpjv"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_tfucu"]
 font = ExtResource("2_1rpjv")
@@ -52,7 +52,7 @@ offset_left = 3.0
 offset_top = 14.0
 offset_right = 247.0
 offset_bottom = 53.0
-text = "Alpha Completada"
+text = "Beta Completada"
 label_settings = SubResource("LabelSettings_tfucu")
 horizontal_alignment = 1
 
@@ -134,7 +134,7 @@ layout_mode = 2
 text = "Agradecimientos
 a las personas que 
 ayudaron a testear
-la alpha
+la beta
 "
 label_settings = SubResource("LabelSettings_1rpjv")
 horizontal_alignment = 1
